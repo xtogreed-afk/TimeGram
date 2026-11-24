@@ -20,7 +20,7 @@ import android.graphics.drawable.Drawable
 import android.text.TextUtils
 import androidx.core.content.edit
 import com.chaquo.python.PyObject
-import com.timegram.hook.HookHandle
+import com.exteragram.hook.HookHandle
 import com.timegram.messenger.editor
 import com.timegram.messenger.pinnedPlugins
 import com.timegram.messenger.plugins.analyzer.AnalyzerUpdater

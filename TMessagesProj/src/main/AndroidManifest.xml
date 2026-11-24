@@ -124,7 +124,7 @@
             android:value="@string/MAPS_V2_API" />
 
         <provider
-            android:name="com.timegram.hook.runtime.HookInitProvider"
+            android:name="com.exteragram.hook.runtime.HookInitProvider"
             tools:node="remove" />
 
         <activity

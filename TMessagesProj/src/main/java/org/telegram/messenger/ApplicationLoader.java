@@ -446,7 +446,7 @@ public class ApplicationLoader extends Application implements Provider {
             }
 
             try {
-                Class.forName("com.timegram.hook.ExteraHook").getMethod("useEmbeddedRuntime").invoke(null);
+                Class.forName("com.exteragram.hook.ExteraHook").getMethod("useEmbeddedRuntime").invoke(null);
                 exteraHookEmbeddedConfigured = true;
             } catch (Throwable t) {
                 throw new RuntimeException("Failed to configure embedded exteraHook runtime", t);

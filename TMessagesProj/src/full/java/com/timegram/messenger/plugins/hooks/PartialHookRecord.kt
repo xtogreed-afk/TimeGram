@@ -14,7 +14,7 @@
 
 package com.timegram.messenger.plugins.hooks
 
-import com.timegram.hook.HookHandle
+import com.exteragram.hook.HookHandle
 import org.telegram.messenger.FileLog
 import java.util.concurrent.atomic.AtomicBoolean
 

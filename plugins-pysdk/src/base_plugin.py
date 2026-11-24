@@ -136,7 +136,7 @@ def _partial_api():
     if _PARTIAL_API is not None:
         return _PARTIAL_API
     try:
-        from com.timegram.hook import ExteraHook, HookTarget, InstructionMatcher, Interceptor
+        from com.exteragram.hook import ExteraHook, HookTarget, InstructionMatcher, Interceptor
         from java import dynamic_proxy, jarray
         from java.lang import Object as JavaObject
     except ImportError as e:
