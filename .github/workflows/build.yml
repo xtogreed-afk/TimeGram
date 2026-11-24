@@ -52,7 +52,7 @@ jobs:
       - name: Build
         run: |
           chmod +x gradlew
-          ./gradlew :TMessagesProj:assembleFullArm64Debug --stacktrace --build-cache
+          ./gradlew :TMessagesProj:assembleLiteArm64Debug --stacktrace --build-cache
       - uses: actions/upload-artifact@v4
         with:
           name: TimeGram-apk
