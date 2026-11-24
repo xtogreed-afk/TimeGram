@@ -13,8 +13,8 @@ import android.graphics.drawable.Drawable;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.exteragram.messenger.ExteraConfig;
-import com.exteragram.messenger.GlassOutlineStyle;
+import com.timegram.messenger.ExteraConfig;
+import com.timegram.messenger.GlassOutlineStyle;
 
 import org.telegram.ui.ActionBar.Theme;
 import org.telegram.ui.Components.blur3.drawable.GlassRim;

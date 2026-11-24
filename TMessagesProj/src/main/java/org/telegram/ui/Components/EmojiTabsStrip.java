@@ -29,8 +29,8 @@ import androidx.collection.LongSparseArray;
 import androidx.core.graphics.ColorUtils;
 import androidx.core.math.MathUtils;
 
-import com.exteragram.messenger.IconPackType;
-import com.exteragram.messenger.icons.IconManager;
+import com.timegram.messenger.IconPackType;
+import com.timegram.messenger.icons.IconManager;
 
 import org.telegram.messenger.AndroidUtilities;
 import org.telegram.messenger.ImageLocation;

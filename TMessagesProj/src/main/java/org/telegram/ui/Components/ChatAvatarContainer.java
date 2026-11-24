@@ -72,8 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
 import me.vkryl.android.animator.BoolAnimator;
 import me.vkryl.android.animator.FactorAnimator;
 
-import com.exteragram.messenger.api.dto.BadgeDTO;
-import com.exteragram.messenger.utils.ui.ChatHeaderUiHelper;
+import com.timegram.messenger.api.dto.BadgeDTO;
+import com.timegram.messenger.utils.ui.ChatHeaderUiHelper;
 
 public class ChatAvatarContainer extends FrameLayout implements FactorAnimator.Target, NotificationCenter.NotificationCenterDelegate, Theme.Colorable {
 

@@ -15,7 +15,7 @@ import android.view.MotionEvent;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 
-import com.exteragram.messenger.utils.system.VibratorUtils;
+import com.timegram.messenger.utils.system.VibratorUtils;
 import org.telegram.messenger.AndroidUtilities;
 import org.telegram.messenger.LocaleController;
 import org.telegram.messenger.R;

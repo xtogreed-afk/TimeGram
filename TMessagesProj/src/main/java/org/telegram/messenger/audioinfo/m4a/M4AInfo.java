@@ -17,7 +17,7 @@ package org.telegram.messenger.audioinfo.m4a;
 
 import android.graphics.Bitmap;
 
-import com.exteragram.messenger.player.CoverDecoder;
+import com.timegram.messenger.player.CoverDecoder;
 
 import org.telegram.messenger.audioinfo.AudioInfo;
 import org.telegram.messenger.audioinfo.mp3.ID3v1Genre;

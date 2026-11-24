@@ -27,10 +27,10 @@ import androidx.core.graphics.ColorUtils;
 import androidx.core.math.MathUtils;
 import androidx.interpolator.view.animation.FastOutSlowInInterpolator;
 
-import com.exteragram.messenger.ExteraConfig;
-import com.exteragram.messenger.speech.VoiceRecognitionController;
-import com.exteragram.messenger.speech.utils.MediaLoader;
-import com.exteragram.messenger.utils.chats.ChatUtils;
+import com.timegram.messenger.ExteraConfig;
+import com.timegram.messenger.speech.VoiceRecognitionController;
+import com.timegram.messenger.speech.utils.MediaLoader;
+import com.timegram.messenger.utils.chats.ChatUtils;
 import org.telegram.messenger.AccountInstance;
 import org.telegram.messenger.AndroidUtilities;
 import org.telegram.messenger.BuildVars;

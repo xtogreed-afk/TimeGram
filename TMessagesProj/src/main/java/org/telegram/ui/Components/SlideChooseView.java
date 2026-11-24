@@ -18,8 +18,8 @@ import androidx.annotation.NonNull;
 import androidx.core.graphics.ColorUtils;
 import androidx.core.math.MathUtils;
 
-import com.exteragram.messenger.ExteraConfig;
-import com.exteragram.messenger.utils.ui.material.MaterialSliderUiHelper;
+import com.timegram.messenger.ExteraConfig;
+import com.timegram.messenger.utils.ui.material.MaterialSliderUiHelper;
 import com.google.android.material.slider.Slider;
 
 import org.telegram.messenger.AndroidUtilities;

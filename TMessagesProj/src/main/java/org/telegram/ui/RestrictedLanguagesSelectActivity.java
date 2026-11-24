@@ -24,7 +24,7 @@ import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.exteragram.messenger.translator.TranslatorUtils;
+import com.timegram.messenger.translator.TranslatorUtils;
 import com.google.common.collect.Sets;
 
 import org.telegram.messenger.AndroidUtilities;

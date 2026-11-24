@@ -90,10 +90,10 @@ import androidx.recyclerview.widget.SimpleItemAnimator;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
-import com.exteragram.messenger.ExteraConfig;
-import com.exteragram.messenger.api.dto.BadgeDTO;
-import com.exteragram.messenger.badges.BadgesController;
-import com.exteragram.messenger.utils.system.VibratorUtils;
+import com.timegram.messenger.ExteraConfig;
+import com.timegram.messenger.api.dto.BadgeDTO;
+import com.timegram.messenger.badges.BadgesController;
+import com.timegram.messenger.utils.system.VibratorUtils;
 import org.telegram.messenger.AccountInstance;
 import org.telegram.messenger.AndroidUtilities;
 import org.telegram.messenger.ChatObject;

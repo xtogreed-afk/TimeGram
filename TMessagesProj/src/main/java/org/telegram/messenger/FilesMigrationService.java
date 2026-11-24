@@ -22,7 +22,7 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 
-import com.exteragram.messenger.icons.IconManager;
+import com.timegram.messenger.icons.IconManager;
 
 import org.telegram.ui.ActionBar.BaseFragment;
 import org.telegram.ui.ActionBar.BottomSheet;

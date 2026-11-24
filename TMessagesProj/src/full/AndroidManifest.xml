@@ -3,7 +3,7 @@
 
     <application>
         <service
-            android:name="com.exteragram.messenger.plugins.analyzer.PluginAnalyzerService"
+            android:name="com.timegram.messenger.plugins.analyzer.PluginAnalyzerService"
             android:exported="false"
             android:process=":analyzer" />
     </application>

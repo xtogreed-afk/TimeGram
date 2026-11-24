@@ -29,7 +29,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.exteragram.messenger.drawer.DrawerContainer;
+import com.timegram.messenger.drawer.DrawerContainer;
 
 import org.telegram.messenger.AndroidUtilities;
 import org.telegram.messenger.BuildVars;

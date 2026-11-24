@@ -6,7 +6,7 @@ import android.text.TextUtils;
 
 import androidx.annotation.Nullable;
 
-import com.exteragram.messenger.utils.ui.MonetUtils;
+import com.timegram.messenger.utils.ui.MonetUtils;
 
 import org.telegram.messenger.AndroidUtilities;
 import org.telegram.messenger.R;

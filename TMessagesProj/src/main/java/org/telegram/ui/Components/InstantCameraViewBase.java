@@ -7,9 +7,9 @@ import android.view.TextureView;
 import android.view.View;
 import android.widget.FrameLayout;
 
-import com.exteragram.messenger.CameraType;
-import com.exteragram.messenger.ExteraConfig;
-import com.exteragram.messenger.camera.InstantCameraZoomSlider;
+import com.timegram.messenger.CameraType;
+import com.timegram.messenger.ExteraConfig;
+import com.timegram.messenger.camera.InstantCameraZoomSlider;
 
 import org.telegram.messenger.AppGlobalConfig;
 import org.telegram.messenger.ImageReceiver;

@@ -40,7 +40,7 @@ import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.core.graphics.ColorUtils;
 
-import com.exteragram.messenger.icons.SvgDocumentPreview;
+import com.timegram.messenger.icons.SvgDocumentPreview;
 
 import org.json.JSONArray;
 import org.json.JSONObject;

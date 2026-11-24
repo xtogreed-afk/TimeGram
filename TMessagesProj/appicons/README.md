@@ -1,7 +1,7 @@
 # App icons
 
 Source of truth for every launcher icon. Everything under `src/main/res-appicons`,
-`src/main/AndroidManifest-appicons.xml` and `src/main/java/com/exteragram/messenger/appicons/GeneratedAppIcons.java`
+`src/main/AndroidManifest-appicons.xml` and `src/main/java/com/timegram/messenger/appicons/GeneratedAppIcons.java`
 is produced from here by
 
 ```

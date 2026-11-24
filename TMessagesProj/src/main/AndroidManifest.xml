@@ -124,7 +124,7 @@
             android:value="@string/MAPS_V2_API" />
 
         <provider
-            android:name="com.exteragram.hook.runtime.HookInitProvider"
+            android:name="com.timegram.hook.runtime.HookInitProvider"
             tools:node="remove" />
 
         <activity
@@ -463,7 +463,7 @@
             android:foregroundServiceType="dataSync"
         />
         <service
-            android:name="com.exteragram.messenger.export.ExportService"
+            android:name="com.timegram.messenger.export.ExportService"
             android:enabled="true"
             android:exported="false"
             android:foregroundServiceType="dataSync"
@@ -506,7 +506,7 @@
             </intent-filter>
         </service>
 
-        <receiver android:name="com.exteragram.messenger.updater.UpdaterUtils$UpdateReceiver" android:exported="true">
+        <receiver android:name="com.timegram.messenger.updater.UpdaterUtils$UpdateReceiver" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
             </intent-filter>
@@ -586,7 +586,7 @@
             android:grantUriPermissions="true"/>
 
         <provider
-            android:name="com.exteragram.messenger.icons.IconPackProvider"
+            android:name="com.timegram.messenger.icons.IconPackProvider"
             android:authorities="${applicationId}.icon_pack_provider"
             android:exported="false"
             android:grantUriPermissions="true"/>

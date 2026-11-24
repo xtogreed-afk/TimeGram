@@ -10,7 +10,7 @@ import android.graphics.Path;
 import android.graphics.RectF;
 import android.graphics.SweepGradient;
 
-import com.exteragram.messenger.utils.ui.GlassUiHelper;
+import com.timegram.messenger.utils.ui.GlassUiHelper;
 
 /**
  * The "Dark out" glass rim (Glass Lab) for views outside QrShareView (emoji islands): white crescents inside with the

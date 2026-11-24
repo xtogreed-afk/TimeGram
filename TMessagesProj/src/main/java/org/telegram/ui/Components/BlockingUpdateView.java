@@ -22,7 +22,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 
-import com.exteragram.messenger.updater.UpdaterUtils;
+import com.timegram.messenger.updater.UpdaterUtils;
 
 import org.telegram.messenger.AndroidUtilities;
 import org.telegram.messenger.ApplicationLoader;

@@ -50,9 +50,9 @@ import androidx.annotation.NonNull;
 import androidx.collection.LongSparseArray;
 import androidx.core.graphics.ColorUtils;
 
-import com.exteragram.messenger.icons.SvgDocumentPreview;
-import com.exteragram.messenger.utils.text.LocaleUtils;
-import com.exteragram.messenger.utils.chats.WidePosts;
+import com.timegram.messenger.icons.SvgDocumentPreview;
+import com.timegram.messenger.utils.text.LocaleUtils;
+import com.timegram.messenger.utils.chats.WidePosts;
 
 import org.telegram.PhoneFormat.PhoneFormat;
 import org.telegram.messenger.browser.Browser;

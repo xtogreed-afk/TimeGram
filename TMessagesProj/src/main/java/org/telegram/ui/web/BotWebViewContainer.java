@@ -81,9 +81,9 @@ import androidx.webkit.WebMessageCompat;
 import androidx.webkit.WebViewCompat;
 import androidx.webkit.WebViewFeature;
 
-import com.exteragram.messenger.adblock.WebAdBlocker;
-import com.exteragram.messenger.export.ui.ExportBrowser;
-import com.exteragram.messenger.utils.ui.WebAppSectionStyle;
+import com.timegram.messenger.adblock.WebAdBlocker;
+import com.timegram.messenger.export.ui.ExportBrowser;
+import com.timegram.messenger.utils.ui.WebAppSectionStyle;
 
 import org.json.JSONArray;
 import org.json.JSONException;

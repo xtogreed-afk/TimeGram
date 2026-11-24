@@ -42,8 +42,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.graphics.ColorUtils;
 
-import com.exteragram.messenger.adblock.WebAdBlocker;
-import com.exteragram.messenger.adblock.ui.AdBlockMenuItem;
+import com.timegram.messenger.adblock.WebAdBlocker;
+import com.timegram.messenger.adblock.ui.AdBlockMenuItem;
 import com.google.android.material.progressindicator.BaseProgressIndicator;
 
 import org.telegram.messenger.AndroidUtilities;

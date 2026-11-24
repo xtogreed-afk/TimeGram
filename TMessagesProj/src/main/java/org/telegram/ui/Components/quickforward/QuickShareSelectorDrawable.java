@@ -37,7 +37,7 @@ import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
 import androidx.core.math.MathUtils;
 
-import com.exteragram.messenger.ExteraConfig;
+import com.timegram.messenger.ExteraConfig;
 
 import org.telegram.messenger.AndroidUtilities;
 import org.telegram.messenger.MessageObject;

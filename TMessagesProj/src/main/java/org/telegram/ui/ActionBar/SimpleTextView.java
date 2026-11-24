@@ -50,7 +50,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
-import com.exteragram.messenger.utils.ui.TextPaint;
+import com.timegram.messenger.utils.ui.TextPaint;
 
 public class SimpleTextView extends View implements Drawable.Callback {
 

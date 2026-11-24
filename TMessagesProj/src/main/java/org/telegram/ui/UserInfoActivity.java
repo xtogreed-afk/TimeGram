@@ -20,11 +20,11 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.exteragram.messenger.ExteraConfig;
-import com.exteragram.messenger.api.model.NowPlayingServiceType;
-import com.exteragram.messenger.badges.BadgesController;
-import com.exteragram.messenger.nowplaying.NowPlayingController;
-import com.exteragram.messenger.nowplaying.ui.SetupNowPlayingActivity;
+import com.timegram.messenger.ExteraConfig;
+import com.timegram.messenger.api.model.NowPlayingServiceType;
+import com.timegram.messenger.badges.BadgesController;
+import com.timegram.messenger.nowplaying.NowPlayingController;
+import com.timegram.messenger.nowplaying.ui.SetupNowPlayingActivity;
 
 import androidx.annotation.Keep;
 

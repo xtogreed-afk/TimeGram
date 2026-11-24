@@ -92,9 +92,9 @@ import androidx.recyclerview.widget.ListUpdateCallback;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
-import com.exteragram.messenger.ExteraConfig;
-import com.exteragram.messenger.IconPackType;
-import com.exteragram.messenger.icons.IconManager;
+import com.timegram.messenger.ExteraConfig;
+import com.timegram.messenger.IconPackType;
+import com.timegram.messenger.icons.IconManager;
 
 import org.telegram.messenger.AccountInstance;
 import org.telegram.messenger.AndroidUtilities;

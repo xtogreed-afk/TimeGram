@@ -17,7 +17,7 @@ import android.util.Log;
 import android.util.TypedValue;
 import android.view.MotionEvent;
 
-import com.exteragram.messenger.components.ReceiveContentEditText;
+import com.timegram.messenger.components.ReceiveContentEditText;
 
 import org.telegram.messenger.AndroidUtilities;
 import org.telegram.messenger.FileLog;

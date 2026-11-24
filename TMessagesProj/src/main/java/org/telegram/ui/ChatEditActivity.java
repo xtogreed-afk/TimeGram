@@ -48,8 +48,8 @@ import android.widget.ScrollView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.exteragram.messenger.ExteraConfig;
-import com.exteragram.messenger.reactions.ReactionsEditActivity;
+import com.timegram.messenger.ExteraConfig;
+import com.timegram.messenger.reactions.ReactionsEditActivity;
 
 import org.telegram.messenger.AndroidUtilities;
 import org.telegram.messenger.ApplicationLoader;

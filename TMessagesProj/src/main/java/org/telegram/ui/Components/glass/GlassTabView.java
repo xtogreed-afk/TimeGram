@@ -29,10 +29,10 @@ import androidx.core.math.MathUtils;
 import androidx.dynamicanimation.animation.FloatPropertyCompat;
 import androidx.dynamicanimation.animation.SpringAnimation;
 
-import com.exteragram.messenger.ExteraConfig;
-import com.exteragram.messenger.IconPackType;
-import com.exteragram.messenger.icons.IconManager;
-import com.exteragram.messenger.utils.ui.tabs.MainTabsUiHelper;
+import com.timegram.messenger.ExteraConfig;
+import com.timegram.messenger.IconPackType;
+import com.timegram.messenger.icons.IconManager;
+import com.timegram.messenger.utils.ui.tabs.MainTabsUiHelper;
 
 import org.telegram.messenger.AndroidUtilities;
 import org.telegram.messenger.ContactsController;

@@ -28,8 +28,8 @@ import android.text.TextUtils;
 
 import androidx.core.graphics.ColorUtils;
 
-import com.exteragram.messenger.ExteraConfig;
-import com.exteragram.messenger.utils.folders.FolderUiHelper;
+import com.timegram.messenger.ExteraConfig;
+import com.timegram.messenger.utils.folders.FolderUiHelper;
 
 import org.telegram.messenger.AndroidUtilities;
 import org.telegram.messenger.ChatObject;

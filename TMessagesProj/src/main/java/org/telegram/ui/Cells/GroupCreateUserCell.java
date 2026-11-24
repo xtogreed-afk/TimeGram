@@ -33,8 +33,8 @@ import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.exteragram.messenger.ExteraConfig;
-import com.exteragram.messenger.utils.folders.FolderRoles;
+import com.timegram.messenger.ExteraConfig;
+import com.timegram.messenger.utils.folders.FolderRoles;
 
 import org.telegram.messenger.AndroidUtilities;
 import org.telegram.messenger.ChatObject;

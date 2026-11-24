@@ -43,11 +43,11 @@ import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.exteragram.messenger.ExteraConfig;
-import com.exteragram.messenger.ai.AiController;
-import com.exteragram.messenger.ai.TelegramAiReplacement;
-import com.exteragram.messenger.translator.TranslationProviders;
-import com.exteragram.messenger.translator.TranslatorUtils;
+import com.timegram.messenger.ExteraConfig;
+import com.timegram.messenger.ai.AiController;
+import com.timegram.messenger.ai.TelegramAiReplacement;
+import com.timegram.messenger.translator.TranslationProviders;
+import com.timegram.messenger.translator.TranslatorUtils;
 
 import com.google.common.base.Charsets;
 //import com.google.mlkit.common.model.RemoteModelManager;

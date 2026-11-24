@@ -41,7 +41,7 @@ import android.view.inputmethod.EditorInfo;
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 
-import com.exteragram.messenger.utils.ui.PaintTextUiHelper;
+import com.timegram.messenger.utils.ui.PaintTextUiHelper;
 
 import org.telegram.messenger.AndroidUtilities;
 import org.telegram.messenger.ApplicationLoader;

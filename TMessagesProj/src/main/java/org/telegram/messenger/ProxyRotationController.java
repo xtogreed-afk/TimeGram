@@ -3,7 +3,7 @@ package org.telegram.messenger;
 import android.content.SharedPreferences;
 import android.os.SystemClock;
 
-import com.exteragram.messenger.proxy.ProxyController;
+import com.timegram.messenger.proxy.ProxyController;
 
 import org.telegram.tgnet.ConnectionsManager;
 

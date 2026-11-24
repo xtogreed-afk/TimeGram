@@ -5,7 +5,7 @@
     <application>
 
         <activity-alias
-            android:name="com.exteragram.messenger.DefaultIcon"
+            android:name="com.timegram.messenger.DefaultIcon"
             android:enabled="true"
             android:exported="true"
             android:targetActivity="org.telegram.ui.LaunchActivity">
@@ -23,7 +23,7 @@
         </activity-alias>
 
         <activity-alias
-            android:name="com.exteragram.messenger.WinterIcon"
+            android:name="com.timegram.messenger.WinterIcon"
             android:enabled="false"
             android:exported="true"
             android:icon="@mipmap/ic_launcher_winter"
@@ -43,7 +43,7 @@
         </activity-alias>
 
         <activity-alias
-            android:name="com.exteragram.messenger.MonetIcon"
+            android:name="com.timegram.messenger.MonetIcon"
             android:enabled="false"
             android:exported="true"
             android:icon="@mipmap/ic_launcher_monet"
@@ -63,7 +63,7 @@
         </activity-alias>
 
         <activity-alias
-            android:name="com.exteragram.messenger.OrbitIcon"
+            android:name="com.timegram.messenger.OrbitIcon"
             android:enabled="false"
             android:exported="true"
             android:icon="@mipmap/ic_launcher_orbit"
@@ -83,7 +83,7 @@
         </activity-alias>
 
         <activity-alias
-            android:name="com.exteragram.messenger.EditorIcon"
+            android:name="com.timegram.messenger.EditorIcon"
             android:enabled="false"
             android:exported="true"
             android:icon="@mipmap/ic_launcher_editor"
@@ -103,7 +103,7 @@
         </activity-alias>
 
         <activity-alias
-            android:name="com.exteragram.messenger.MoleIcon"
+            android:name="com.timegram.messenger.MoleIcon"
             android:enabled="false"
             android:exported="true"
             android:icon="@mipmap/ic_launcher_mole"
@@ -123,7 +123,7 @@
         </activity-alias>
 
         <activity-alias
-            android:name="com.exteragram.messenger.EchpochmakIcon"
+            android:name="com.timegram.messenger.EchpochmakIcon"
             android:enabled="false"
             android:exported="true"
             android:icon="@mipmap/ic_launcher_echpochmak"
@@ -143,7 +143,7 @@
         </activity-alias>
 
         <activity-alias
-            android:name="com.exteragram.messenger.AvatarIcon"
+            android:name="com.timegram.messenger.AvatarIcon"
             android:enabled="false"
             android:exported="true"
             android:icon="@mipmap/ic_launcher_avatar"
@@ -163,7 +163,7 @@
         </activity-alias>
 
         <activity-alias
-            android:name="com.exteragram.messenger.CandyIcon"
+            android:name="com.timegram.messenger.CandyIcon"
             android:enabled="false"
             android:exported="true"
             android:icon="@mipmap/ic_launcher_candy"
@@ -183,7 +183,7 @@
         </activity-alias>
 
         <activity-alias
-            android:name="com.exteragram.messenger.GuitarIcon"
+            android:name="com.timegram.messenger.GuitarIcon"
             android:enabled="false"
             android:exported="true"
             android:icon="@mipmap/ic_launcher_guitar"
@@ -203,7 +203,7 @@
         </activity-alias>
 
         <activity-alias
-            android:name="com.exteragram.messenger.SusIcon"
+            android:name="com.timegram.messenger.SusIcon"
             android:enabled="false"
             android:exported="true"
             android:icon="@mipmap/ic_launcher_sus"
@@ -223,7 +223,7 @@
         </activity-alias>
 
         <activity-alias
-            android:name="com.exteragram.messenger.FrogIcon"
+            android:name="com.timegram.messenger.FrogIcon"
             android:enabled="false"
             android:exported="true"
             android:icon="@mipmap/ic_launcher_frog"
@@ -243,7 +243,7 @@
         </activity-alias>
 
         <activity-alias
-            android:name="com.exteragram.messenger.HamsterIcon"
+            android:name="com.timegram.messenger.HamsterIcon"
             android:enabled="false"
             android:exported="true"
             android:icon="@mipmap/ic_launcher_hamster"
@@ -263,7 +263,7 @@
         </activity-alias>
 
         <activity-alias
-            android:name="com.exteragram.messenger.SpongeIcon"
+            android:name="com.timegram.messenger.SpongeIcon"
             android:enabled="false"
             android:exported="true"
             android:icon="@mipmap/ic_launcher_sponge"
@@ -283,7 +283,7 @@
         </activity-alias>
 
         <activity-alias
-            android:name="com.exteragram.messenger.InvincibleIcon"
+            android:name="com.timegram.messenger.InvincibleIcon"
             android:enabled="false"
             android:exported="true"
             android:icon="@mipmap/ic_launcher_invincible"
@@ -303,7 +303,7 @@
         </activity-alias>
 
         <activity-alias
-            android:name="com.exteragram.messenger.FlappyIcon"
+            android:name="com.timegram.messenger.FlappyIcon"
             android:enabled="false"
             android:exported="true"
             android:icon="@mipmap/ic_launcher_flappy"
@@ -323,7 +323,7 @@
         </activity-alias>
 
         <activity-alias
-            android:name="com.exteragram.messenger.NyanCatIcon"
+            android:name="com.timegram.messenger.NyanCatIcon"
             android:enabled="false"
             android:exported="true"
             android:icon="@mipmap/ic_launcher_nyan_cat"
@@ -343,7 +343,7 @@
         </activity-alias>
 
         <activity-alias
-            android:name="com.exteragram.messenger.IceAgeIcon"
+            android:name="com.timegram.messenger.IceAgeIcon"
             android:enabled="false"
             android:exported="true"
             android:icon="@mipmap/ic_launcher_ice_age"
@@ -363,7 +363,7 @@
         </activity-alias>
 
         <activity-alias
-            android:name="com.exteragram.messenger.FishIcon"
+            android:name="com.timegram.messenger.FishIcon"
             android:enabled="false"
             android:exported="true"
             android:icon="@mipmap/ic_launcher_fish"
@@ -383,7 +383,7 @@
         </activity-alias>
 
         <activity-alias
-            android:name="com.exteragram.messenger.PsychosisIcon"
+            android:name="com.timegram.messenger.PsychosisIcon"
             android:enabled="false"
             android:exported="true"
             android:icon="@mipmap/ic_launcher_psychosis"
@@ -403,7 +403,7 @@
         </activity-alias>
 
         <activity-alias
-            android:name="com.exteragram.messenger.XpIcon"
+            android:name="com.timegram.messenger.XpIcon"
             android:enabled="false"
             android:exported="true"
             android:icon="@mipmap/ic_launcher_xp"
@@ -423,7 +423,7 @@
         </activity-alias>
 
         <activity-alias
-            android:name="com.exteragram.messenger.NasaIcon"
+            android:name="com.timegram.messenger.NasaIcon"
             android:enabled="false"
             android:exported="true"
             android:icon="@mipmap/ic_launcher_nasa"
@@ -443,7 +443,7 @@
         </activity-alias>
 
         <activity-alias
-            android:name="com.exteragram.messenger.CyberpunkIcon"
+            android:name="com.timegram.messenger.CyberpunkIcon"
             android:enabled="false"
             android:exported="true"
             android:icon="@mipmap/ic_launcher_cyberpunk"
@@ -463,7 +463,7 @@
         </activity-alias>
 
         <activity-alias
-            android:name="com.exteragram.messenger.SpaceIcon"
+            android:name="com.timegram.messenger.SpaceIcon"
             android:enabled="false"
             android:exported="true"
             android:icon="@mipmap/ic_launcher_space"
@@ -483,7 +483,7 @@
         </activity-alias>
 
         <activity-alias
-            android:name="com.exteragram.messenger.JellyfishIcon"
+            android:name="com.timegram.messenger.JellyfishIcon"
             android:enabled="false"
             android:exported="true"
             android:icon="@mipmap/ic_launcher_jellyfish"
@@ -503,7 +503,7 @@
         </activity-alias>
 
         <activity-alias
-            android:name="com.exteragram.messenger.HumanIcon"
+            android:name="com.timegram.messenger.HumanIcon"
             android:enabled="false"
             android:exported="true"
             android:icon="@mipmap/ic_launcher_human"
@@ -523,7 +523,7 @@
         </activity-alias>
 
         <activity-alias
-            android:name="com.exteragram.messenger.SunsetIcon"
+            android:name="com.timegram.messenger.SunsetIcon"
             android:enabled="false"
             android:exported="true"
             android:icon="@mipmap/ic_launcher_sunset"
@@ -543,7 +543,7 @@
         </activity-alias>
 
         <activity-alias
-            android:name="com.exteragram.messenger.AmethystIcon"
+            android:name="com.timegram.messenger.AmethystIcon"
             android:enabled="false"
             android:exported="true"
             android:icon="@mipmap/ic_launcher_amethyst"
@@ -563,7 +563,7 @@
         </activity-alias>
 
         <activity-alias
-            android:name="com.exteragram.messenger.AuroraIcon"
+            android:name="com.timegram.messenger.AuroraIcon"
             android:enabled="false"
             android:exported="true"
             android:icon="@mipmap/ic_launcher_aurora"
@@ -583,7 +583,7 @@
         </activity-alias>
 
         <activity-alias
-            android:name="com.exteragram.messenger.OsuIcon"
+            android:name="com.timegram.messenger.OsuIcon"
             android:enabled="false"
             android:exported="true"
             android:icon="@mipmap/ic_launcher_osu"
@@ -603,7 +603,7 @@
         </activity-alias>
 
         <activity-alias
-            android:name="com.exteragram.messenger.GoogleIcon"
+            android:name="com.timegram.messenger.GoogleIcon"
             android:enabled="false"
             android:exported="true"
             android:icon="@mipmap/ic_launcher_google"
@@ -623,7 +623,7 @@
         </activity-alias>
 
         <activity-alias
-            android:name="com.exteragram.messenger.Google26Icon"
+            android:name="com.timegram.messenger.Google26Icon"
             android:enabled="false"
             android:exported="true"
             android:icon="@mipmap/ic_launcher_google26"

@@ -19,10 +19,10 @@ import androidx.annotation.OptIn;
 import androidx.media3.common.util.UnstableApi;
 import androidx.media3.exoplayer.upstream.DefaultBandwidthMeter;
 
-import com.exteragram.messenger.feed.FeedRequestNormalizer;
-import com.exteragram.messenger.security.SensitivePaymentForms;
-import com.exteragram.messenger.plugins.hooks.PluginsHooks;
-import com.exteragram.messenger.plugins.PluginsController;
+import com.timegram.messenger.feed.FeedRequestNormalizer;
+import com.timegram.messenger.security.SensitivePaymentForms;
+import com.timegram.messenger.plugins.hooks.PluginsHooks;
+import com.timegram.messenger.plugins.PluginsController;
 import com.google.android.gms.tasks.Task;
 import com.google.android.play.core.integrity.IntegrityManager;
 import com.google.android.play.core.integrity.IntegrityManagerFactory;

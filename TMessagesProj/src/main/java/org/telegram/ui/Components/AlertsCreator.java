@@ -78,8 +78,8 @@ import androidx.annotation.RawRes;
 import androidx.annotation.RequiresApi;
 import androidx.core.util.Consumer;
 
-import com.exteragram.messenger.ExteraConfig;
-import com.exteragram.messenger.utils.system.VibratorUtils;
+import com.timegram.messenger.ExteraConfig;
+import com.timegram.messenger.utils.system.VibratorUtils;
 import org.telegram.messenger.AccountInstance;
 import org.telegram.messenger.AndroidUtilities;
 import org.telegram.messenger.ApplicationLoader;

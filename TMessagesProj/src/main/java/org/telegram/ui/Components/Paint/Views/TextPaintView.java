@@ -22,7 +22,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.EditorInfo;
 
-import com.exteragram.messenger.utils.ui.PaintTextUiHelper;
+import com.timegram.messenger.utils.ui.PaintTextUiHelper;
 
 import org.telegram.messenger.AndroidUtilities;
 import org.telegram.messenger.Emoji;

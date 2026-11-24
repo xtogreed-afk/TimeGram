@@ -18,7 +18,7 @@ import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.FrameLayout;
 
-import com.exteragram.messenger.utils.ui.PaintTextUiHelper;
+import com.timegram.messenger.utils.ui.PaintTextUiHelper;
 
 import org.telegram.messenger.AndroidUtilities;
 import org.telegram.messenger.Emoji;

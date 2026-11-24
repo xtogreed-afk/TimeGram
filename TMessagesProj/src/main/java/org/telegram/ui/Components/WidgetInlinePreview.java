@@ -5,7 +5,7 @@ import android.graphics.Paint;
 import android.graphics.Path;
 import android.view.View;
 
-import com.exteragram.messenger.utils.ui.WidgetRunPlaceholder;
+import com.timegram.messenger.utils.ui.WidgetRunPlaceholder;
 
 import org.telegram.messenger.AndroidUtilities;
 import org.telegram.messenger.SharedConfig;

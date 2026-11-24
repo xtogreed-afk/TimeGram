@@ -20,7 +20,7 @@ import android.widget.RemoteViewsService;
 
 import androidx.collection.LongSparseArray;
 
-import com.exteragram.messenger.ExteraConfig;
+import com.timegram.messenger.ExteraConfig;
 
 import org.telegram.tgnet.TLRPC;
 import org.telegram.ui.ActionBar.Theme;

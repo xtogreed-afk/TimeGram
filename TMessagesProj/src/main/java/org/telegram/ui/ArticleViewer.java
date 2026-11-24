@@ -116,11 +116,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
-import com.exteragram.messenger.ExteraConfig;
-import com.exteragram.messenger.adblock.WebAdBlocker;
-import com.exteragram.messenger.components.PreformattedScrollView;
-import com.exteragram.messenger.utils.AppUtils;
-import com.exteragram.messenger.utils.MarkdownUtils;
+import com.timegram.messenger.ExteraConfig;
+import com.timegram.messenger.adblock.WebAdBlocker;
+import com.timegram.messenger.components.PreformattedScrollView;
+import com.timegram.messenger.utils.AppUtils;
+import com.timegram.messenger.utils.MarkdownUtils;
 import org.json.JSONObject;
 import org.telegram.messenger.AndroidUtilities;
 import org.telegram.messenger.AnimationNotificationsLocker;

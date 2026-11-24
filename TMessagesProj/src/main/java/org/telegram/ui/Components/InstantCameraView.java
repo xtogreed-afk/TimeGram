@@ -8,7 +8,7 @@
 
 package org.telegram.ui.Components;
 
-import static com.exteragram.messenger.debug.DebugConfig.getDebugCameraMetrics;
+import static com.timegram.messenger.debug.DebugConfig.getDebugCameraMetrics;
 import static org.telegram.messenger.AndroidUtilities.dp;
 
 import android.animation.Animator;
@@ -60,17 +60,17 @@ import androidx.camera.core.Preview;
 import androidx.core.graphics.ColorUtils;
 import androidx.media3.exoplayer.ExoPlayer;
 
-import com.exteragram.messenger.ExteraConfig;
-import com.exteragram.messenger.camera.CameraDebugUtils;
-import com.exteragram.messenger.camera.CameraXSession;
-import com.exteragram.messenger.camera.InstantCameraZoomSlider;
-import com.exteragram.messenger.camera.RoundVideoEncoder;
-import com.exteragram.messenger.camera.RoundVideoUiHelper;
-import com.exteragram.messenger.CameraType;
-import com.exteragram.messenger.VideoMessagesCamera;
-import com.exteragram.messenger.debug.DebugOverlayView;
-import com.exteragram.messenger.debug.DebugConfig;
-import com.exteragram.messenger.utils.system.SystemUtils;
+import com.timegram.messenger.ExteraConfig;
+import com.timegram.messenger.camera.CameraDebugUtils;
+import com.timegram.messenger.camera.CameraXSession;
+import com.timegram.messenger.camera.InstantCameraZoomSlider;
+import com.timegram.messenger.camera.RoundVideoEncoder;
+import com.timegram.messenger.camera.RoundVideoUiHelper;
+import com.timegram.messenger.CameraType;
+import com.timegram.messenger.VideoMessagesCamera;
+import com.timegram.messenger.debug.DebugOverlayView;
+import com.timegram.messenger.debug.DebugConfig;
+import com.timegram.messenger.utils.system.SystemUtils;
 
 import org.telegram.messenger.AndroidUtilities;
 import org.telegram.messenger.ApplicationLoader;

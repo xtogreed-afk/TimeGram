@@ -149,10 +149,10 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.Stack;
 
-import com.exteragram.messenger.AvatarCornerType;
-import com.exteragram.messenger.ExteraConfig;
-import com.exteragram.messenger.badges.BadgesController;
-import com.exteragram.messenger.utils.text.LocaleUtils;
+import com.timegram.messenger.AvatarCornerType;
+import com.timegram.messenger.ExteraConfig;
+import com.timegram.messenger.badges.BadgesController;
+import com.timegram.messenger.utils.text.LocaleUtils;
 
 import me.vkryl.android.animator.BoolAnimator;
 import java.util.HashSet;

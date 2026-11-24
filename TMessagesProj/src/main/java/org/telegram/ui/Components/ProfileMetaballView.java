@@ -22,7 +22,7 @@ import android.view.View;
 
 import androidx.annotation.RequiresApi;
 
-import com.exteragram.messenger.ExteraConfig;
+import com.timegram.messenger.ExteraConfig;
 import com.google.zxing.common.detector.MathUtils;
 
 import org.telegram.messenger.AndroidUtilities;

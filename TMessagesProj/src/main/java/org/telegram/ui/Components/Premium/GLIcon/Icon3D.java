@@ -12,7 +12,7 @@ import android.graphics.Shader;
 import android.opengl.GLES20;
 import android.opengl.GLUtils;
 
-import com.exteragram.messenger.components.supporter.SupporterArrowEngraving;
+import com.timegram.messenger.components.supporter.SupporterArrowEngraving;
 
 import org.telegram.messenger.R;
 import org.telegram.messenger.SvgHelper;

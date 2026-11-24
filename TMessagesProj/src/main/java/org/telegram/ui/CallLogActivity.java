@@ -37,10 +37,10 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.exteragram.messenger.config.BottomNavigationBar;
-import com.exteragram.messenger.utils.ui.tabs.HideOnScrollTracker;
-import com.exteragram.messenger.utils.ui.tabs.MainTabsUiHelper;
-import com.exteragram.messenger.utils.ui.GlassUiHelper;
+import com.timegram.messenger.config.BottomNavigationBar;
+import com.timegram.messenger.utils.ui.tabs.HideOnScrollTracker;
+import com.timegram.messenger.utils.ui.tabs.MainTabsUiHelper;
+import com.timegram.messenger.utils.ui.GlassUiHelper;
 
 import org.telegram.messenger.AndroidUtilities;
 import org.telegram.messenger.ChatObject;

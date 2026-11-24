@@ -22,9 +22,9 @@ import androidx.annotation.RawRes;
 import org.telegram.messenger.LocaleController;
 import org.telegram.messenger.utils.ViewOutlineProviderImpl;
 
-import com.exteragram.messenger.ExteraConfig;
-import com.exteragram.messenger.utils.ui.FabUiHelper;
-import com.exteragram.messenger.utils.ui.UIUtil;
+import com.timegram.messenger.ExteraConfig;
+import com.timegram.messenger.utils.ui.FabUiHelper;
+import com.timegram.messenger.utils.ui.UIUtil;
 import org.telegram.ui.ActionBar.Theme;
 import org.telegram.ui.Components.blur3.drawable.BlurredBackgroundDrawable;
 import org.telegram.ui.Components.blur3.drawable.color.impl.BlurredBackgroundProviderImpl;

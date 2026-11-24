@@ -87,10 +87,10 @@ import org.telegram.ui.LaunchActivity;
 import org.telegram.utils.glass.BaseFragmentSimpleGlass;
 import org.telegram.utils.glass.GlassEngine;
 
-import com.exteragram.messenger.security.SensitiveRequestConfirmation;
-import com.exteragram.messenger.ExteraConfig;
-import com.exteragram.messenger.utils.system.VibratorUtils;
-import com.exteragram.messenger.utils.ui.predictiveback.PredictiveBackAnimationHelper;
+import com.timegram.messenger.security.SensitiveRequestConfirmation;
+import com.timegram.messenger.ExteraConfig;
+import com.timegram.messenger.utils.system.VibratorUtils;
+import com.timegram.messenger.utils.ui.predictiveback.PredictiveBackAnimationHelper;
 
 import java.util.ArrayList;
 import java.util.HashSet;

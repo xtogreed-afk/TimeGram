@@ -52,10 +52,10 @@ import androidx.core.view.ViewCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.exteragram.messenger.ExteraConfig;
-import com.exteragram.messenger.badges.BadgesController;
-import com.exteragram.messenger.utils.chats.ChatUtils;
-import com.exteragram.messenger.utils.system.VibratorUtils;
+import com.timegram.messenger.ExteraConfig;
+import com.timegram.messenger.badges.BadgesController;
+import com.timegram.messenger.utils.chats.ChatUtils;
+import com.timegram.messenger.utils.system.VibratorUtils;
 
 import org.telegram.messenger.AccountInstance;
 import org.telegram.messenger.AndroidUtilities;

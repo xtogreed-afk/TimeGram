@@ -58,10 +58,10 @@ import androidx.annotation.Keep;
 import androidx.annotation.NonNull;
 import androidx.core.graphics.ColorUtils;
 
-import com.exteragram.messenger.ExteraConfig;
-import com.exteragram.messenger.player.PlayerLauncher;
-import com.exteragram.messenger.player.mini.MiniPlayerUiHelper;
-import com.exteragram.messenger.player.ui.SpeedPitchMenuItem;
+import com.timegram.messenger.ExteraConfig;
+import com.timegram.messenger.player.PlayerLauncher;
+import com.timegram.messenger.player.mini.MiniPlayerUiHelper;
+import com.timegram.messenger.player.ui.SpeedPitchMenuItem;
 
 import org.telegram.messenger.AccountInstance;
 import org.telegram.messenger.AndroidUtilities;

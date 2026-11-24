@@ -3,7 +3,7 @@ package org.telegram.ui.Components;
 import android.graphics.drawable.Drawable;
 import android.view.View;
 
-import com.exteragram.messenger.badges.BadgesController;
+import com.timegram.messenger.badges.BadgesController;
 
 import org.telegram.messenger.AndroidUtilities;
 import org.telegram.messenger.DialogObject;

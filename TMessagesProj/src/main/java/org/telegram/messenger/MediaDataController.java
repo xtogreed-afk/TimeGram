@@ -50,10 +50,10 @@ import androidx.core.content.pm.ShortcutManagerCompat;
 import androidx.core.graphics.drawable.IconCompat;
 
 import com.android.billingclient.api.ProductDetails;
-import com.exteragram.messenger.ExteraConfig;
-import com.exteragram.messenger.utils.IntentsController;
-import com.exteragram.messenger.utils.chats.ChatSearchLocalFilter;
-import com.exteragram.messenger.utils.chats.ChatUtils;
+import com.timegram.messenger.ExteraConfig;
+import com.timegram.messenger.utils.IntentsController;
+import com.timegram.messenger.utils.chats.ChatSearchLocalFilter;
+import com.timegram.messenger.utils.chats.ChatUtils;
 
 import org.telegram.SQLite.SQLiteCursor;
 import org.telegram.SQLite.SQLiteDatabase;
@@ -122,9 +122,9 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import com.exteragram.messenger.plugins.PluginsController;
-import com.exteragram.messenger.utils.text.LocaleUtils;
-import com.exteragram.messenger.utils.ui.UIUtil;
+import com.timegram.messenger.plugins.PluginsController;
+import com.timegram.messenger.utils.text.LocaleUtils;
+import com.timegram.messenger.utils.ui.UIUtil;
 
 @SuppressWarnings("unchecked")
 public class MediaDataController extends BaseController {

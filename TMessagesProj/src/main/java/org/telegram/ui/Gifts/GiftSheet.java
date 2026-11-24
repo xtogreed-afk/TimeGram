@@ -61,7 +61,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import com.android.billingclient.api.BillingClient;
 import com.android.billingclient.api.ProductDetails;
 import com.android.billingclient.api.QueryProductDetailsParams;
-import com.exteragram.messenger.ExteraConfig;
+import com.timegram.messenger.ExteraConfig;
 
 import org.telegram.messenger.AndroidUtilities;
 import org.telegram.messenger.BillingController;

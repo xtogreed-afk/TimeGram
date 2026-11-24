@@ -10,7 +10,7 @@ import android.graphics.drawable.Drawable;
 import android.view.MotionEvent;
 import android.view.View;
 
-import com.exteragram.messenger.utils.ui.WidgetRunPlaceholder;
+import com.timegram.messenger.utils.ui.WidgetRunPlaceholder;
 
 import org.telegram.messenger.AndroidUtilities;
 import org.telegram.messenger.BuildVars;

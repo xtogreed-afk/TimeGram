@@ -11,7 +11,7 @@ import android.os.PowerManager;
 
 import androidx.annotation.NonNull;
 
-import com.exteragram.messenger.utils.system.SystemUtils;
+import com.timegram.messenger.utils.system.SystemUtils;
 
 import org.telegram.messenger.ApplicationLoader;
 import org.telegram.messenger.BuildVars;

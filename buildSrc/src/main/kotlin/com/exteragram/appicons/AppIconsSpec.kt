@@ -1,4 +1,4 @@
-package com.exteragram.appicons
+package com.timegram.appicons
 
 import com.google.gson.Gson
 import org.gradle.api.GradleException

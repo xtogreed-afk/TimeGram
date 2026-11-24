@@ -50,7 +50,7 @@ import androidx.annotation.NonNull;
 import androidx.core.view.accessibility.AccessibilityNodeInfoCompat;
 import androidx.core.view.inputmethod.EditorInfoCompat;
 
-import com.exteragram.messenger.inline.InlineMathController;
+import com.timegram.messenger.inline.InlineMathController;
 
 import org.telegram.messenger.AndroidUtilities;
 import org.telegram.utils.code.highlight.CodeHighlighting;

@@ -63,14 +63,14 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.exteragram.messenger.ExteraConfig;
-import com.exteragram.messenger.GlassOutlineStyle;
-import com.exteragram.messenger.config.BottomNavigationBar;
-import com.exteragram.messenger.debug.DebugActivity;
-import com.exteragram.messenger.preferences.MainPreferencesActivity;
-import com.exteragram.messenger.utils.AppUtils;
-import com.exteragram.messenger.utils.ui.tabs.HideOnScrollTracker;
-import com.exteragram.messenger.utils.ui.tabs.MainTabsUiHelper;
+import com.timegram.messenger.ExteraConfig;
+import com.timegram.messenger.GlassOutlineStyle;
+import com.timegram.messenger.config.BottomNavigationBar;
+import com.timegram.messenger.debug.DebugActivity;
+import com.timegram.messenger.preferences.MainPreferencesActivity;
+import com.timegram.messenger.utils.AppUtils;
+import com.timegram.messenger.utils.ui.tabs.HideOnScrollTracker;
+import com.timegram.messenger.utils.ui.tabs.MainTabsUiHelper;
 
 import org.telegram.PhoneFormat.PhoneFormat;
 import org.telegram.messenger.AndroidUtilities;

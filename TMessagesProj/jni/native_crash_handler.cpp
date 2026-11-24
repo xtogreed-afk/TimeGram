@@ -62,7 +62,7 @@ static void native_crash_signal_handler(int signum, siginfo_t* info, void* /* co
 }
 
 extern "C" JNIEXPORT void JNICALL
-Java_com_exteragram_messenger_plugins_utils_NativeCrashHandler_init(JNIEnv* env, jclass /* clazz */, jstring flagPath) {
+Java_com_timegram_messenger_plugins_utils_NativeCrashHandler_init(JNIEnv* env, jclass /* clazz */, jstring flagPath) {
     if (g_initialized) {
         return;
     }

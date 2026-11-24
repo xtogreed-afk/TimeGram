@@ -6,7 +6,7 @@ import android.text.TextUtils;
 
 import androidx.annotation.NonNull;
 
-import com.exteragram.messenger.utils.chats.ChatUtils;
+import com.timegram.messenger.utils.chats.ChatUtils;
 import org.telegram.tgnet.ConnectionsManager;
 import org.telegram.tgnet.TLObject;
 import org.telegram.tgnet.TLRPC;

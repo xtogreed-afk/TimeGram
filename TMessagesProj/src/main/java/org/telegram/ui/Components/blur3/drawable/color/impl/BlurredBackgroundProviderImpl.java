@@ -7,9 +7,9 @@ import android.graphics.Color;
 import androidx.core.graphics.ColorUtils;
 import androidx.core.math.MathUtils;
 
-import com.exteragram.messenger.utils.ui.ChatHeaderUiHelper;
-import com.exteragram.messenger.utils.ui.FabUiHelper;
-import com.exteragram.messenger.utils.ui.tabs.MainTabsUiHelper;
+import com.timegram.messenger.utils.ui.ChatHeaderUiHelper;
+import com.timegram.messenger.utils.ui.FabUiHelper;
+import com.timegram.messenger.utils.ui.tabs.MainTabsUiHelper;
 
 import org.telegram.messenger.LiteMode;
 import org.telegram.messenger.MessagesController;

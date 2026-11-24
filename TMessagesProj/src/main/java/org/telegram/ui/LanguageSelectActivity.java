@@ -26,7 +26,7 @@ import androidx.recyclerview.widget.RecyclerView;
 //import com.google.mlkit.common.model.RemoteModelManager;
 //import com.google.mlkit.nl.translate.TranslateRemoteModel;
 
-import com.exteragram.messenger.preferences.GeneralPreferencesActivity;
+import com.timegram.messenger.preferences.GeneralPreferencesActivity;
 
 import org.telegram.messenger.AndroidUtilities;
 import org.telegram.messenger.FileLog;

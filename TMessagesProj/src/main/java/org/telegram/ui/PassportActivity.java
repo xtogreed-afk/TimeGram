@@ -65,7 +65,7 @@ import android.widget.Toast;
 import androidx.core.content.FileProvider;
 import androidx.core.graphics.ColorUtils;
 
-import com.exteragram.messenger.ExteraConfig;
+import com.timegram.messenger.ExteraConfig;
 
 import org.json.JSONArray;
 import org.json.JSONObject;

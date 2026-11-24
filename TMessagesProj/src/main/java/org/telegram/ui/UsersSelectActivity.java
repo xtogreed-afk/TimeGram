@@ -46,9 +46,9 @@ import androidx.collection.LongSparseArray;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.exteragram.messenger.utils.chats.ChatUtils;
-import com.exteragram.messenger.utils.folders.FolderRoles;
-import com.exteragram.messenger.utils.folders.FolderUiHelper;
+import com.timegram.messenger.utils.chats.ChatUtils;
+import com.timegram.messenger.utils.folders.FolderRoles;
+import com.timegram.messenger.utils.folders.FolderUiHelper;
 
 import org.telegram.messenger.AndroidUtilities;
 import org.telegram.messenger.ChatObject;

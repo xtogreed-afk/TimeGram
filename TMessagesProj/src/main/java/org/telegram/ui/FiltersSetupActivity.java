@@ -31,8 +31,8 @@ import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.exteragram.messenger.ExteraConfig;
-import com.exteragram.messenger.utils.system.VibratorUtils;
+import com.timegram.messenger.ExteraConfig;
+import com.timegram.messenger.utils.system.VibratorUtils;
 import org.telegram.messenger.AndroidUtilities;
 import org.telegram.messenger.Emoji;
 import org.telegram.messenger.FileLog;
@@ -78,7 +78,7 @@ import org.telegram.utils.glass.BaseFragmentSimpleGlass;
 import java.util.ArrayList;
 import java.util.HashSet;
 
-import com.exteragram.messenger.utils.folders.FolderUiHelper;
+import com.timegram.messenger.utils.folders.FolderUiHelper;
 
 public class FiltersSetupActivity extends BaseFragment implements NotificationCenter.NotificationCenterDelegate {
 

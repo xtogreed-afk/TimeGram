@@ -27,7 +27,7 @@ import android.widget.ImageView;
 
 import androidx.core.graphics.ColorUtils;
 
-import com.exteragram.messenger.utils.ui.predictiveback.PredictiveBackNavigationHelper;
+import com.timegram.messenger.utils.ui.predictiveback.PredictiveBackNavigationHelper;
 
 import org.telegram.messenger.AndroidUtilities;
 import org.telegram.messenger.ApplicationLoader;

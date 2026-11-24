@@ -70,8 +70,8 @@ import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.exteragram.messenger.utils.chats.ForwardContext;
-import com.exteragram.messenger.utils.chats.ChatUtils;
+import com.timegram.messenger.utils.chats.ForwardContext;
+import com.timegram.messenger.utils.chats.ChatUtils;
 import com.google.android.gms.cast.framework.CastContext;
 
 import org.telegram.messenger.AndroidUtilities;

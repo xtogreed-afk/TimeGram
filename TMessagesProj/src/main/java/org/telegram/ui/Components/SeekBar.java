@@ -22,7 +22,7 @@ import android.util.Pair;
 import android.view.MotionEvent;
 import android.view.View;
 
-import com.exteragram.messenger.player.ui.WavySeekBar;
+import com.timegram.messenger.player.ui.WavySeekBar;
 
 import org.telegram.messenger.AndroidUtilities;
 import org.telegram.messenger.Emoji;

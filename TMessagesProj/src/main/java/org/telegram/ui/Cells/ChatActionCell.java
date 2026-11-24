@@ -167,9 +167,9 @@ import java.util.Stack;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicReference;
 
-import com.exteragram.messenger.AvatarCornerType;
-import com.exteragram.messenger.ExteraConfig;
-import com.exteragram.messenger.utils.chats.ChatUtils;
+import com.timegram.messenger.AvatarCornerType;
+import com.timegram.messenger.ExteraConfig;
+import com.timegram.messenger.utils.chats.ChatUtils;
 
 import me.vkryl.core.BitwiseUtils;
 

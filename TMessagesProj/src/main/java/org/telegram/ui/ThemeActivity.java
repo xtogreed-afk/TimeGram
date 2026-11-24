@@ -53,11 +53,11 @@ import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.exteragram.messenger.appicons.AppIcon;
-import com.exteragram.messenger.appicons.AppIconController;
-import com.exteragram.messenger.appicons.AppIconPreviewDrawable;
-import com.exteragram.messenger.appicons.AppIconPreviewLoader;
-import com.exteragram.messenger.appicons.ui.AppIconsActivity;
+import com.timegram.messenger.appicons.AppIcon;
+import com.timegram.messenger.appicons.AppIconController;
+import com.timegram.messenger.appicons.AppIconPreviewDrawable;
+import com.timegram.messenger.appicons.AppIconPreviewLoader;
+import com.timegram.messenger.appicons.ui.AppIconsActivity;
 
 import org.telegram.messenger.BuildVars;
 import org.telegram.messenger.AndroidUtilities;

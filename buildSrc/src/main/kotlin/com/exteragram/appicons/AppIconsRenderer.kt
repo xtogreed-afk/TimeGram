@@ -1,4 +1,4 @@
-package com.exteragram.appicons
+package com.timegram.appicons
 
 import org.gradle.api.GradleException
 import java.awt.AlphaComposite

@@ -49,8 +49,8 @@ import androidx.annotation.Nullable;
 import androidx.core.graphics.Insets;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.exteragram.messenger.ExteraConfig;
-import com.exteragram.messenger.utils.text.LocaleUtils;
+import com.timegram.messenger.ExteraConfig;
+import com.timegram.messenger.utils.text.LocaleUtils;
 
 import org.telegram.messenger.AccountInstance;
 import org.telegram.messenger.AndroidUtilities;

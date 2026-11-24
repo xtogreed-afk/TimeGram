@@ -25,7 +25,7 @@ import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.exteragram.messenger.utils.ui.material.SwitchUiHelper;
+import com.timegram.messenger.utils.ui.material.SwitchUiHelper;
 
 import org.telegram.messenger.AndroidUtilities;
 import org.telegram.messenger.LocaleController;

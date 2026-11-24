@@ -9,7 +9,7 @@ import android.util.LongSparseArray;
 
 import androidx.annotation.Nullable;
 
-import com.exteragram.messenger.ExteraConfig;
+import com.timegram.messenger.ExteraConfig;
 
 import org.telegram.messenger.wallpaper.WallpaperBitmapHolder;
 import org.telegram.messenger.wallpaper.WallpaperGiftPatternPosition;

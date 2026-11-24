@@ -89,11 +89,11 @@ import androidx.dynamicanimation.animation.SpringForce;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.exteragram.messenger.ExteraConfig;
-import com.exteragram.messenger.components.TranslateBeforeSendWrapper;
-import com.exteragram.messenger.utils.system.SystemUtils;
-import com.exteragram.messenger.utils.text.LocaleUtils;
-import com.exteragram.messenger.translator.TranslatorUtils;
+import com.timegram.messenger.ExteraConfig;
+import com.timegram.messenger.components.TranslateBeforeSendWrapper;
+import com.timegram.messenger.utils.system.SystemUtils;
+import com.timegram.messenger.utils.text.LocaleUtils;
+import com.timegram.messenger.translator.TranslatorUtils;
 
 import org.telegram.messenger.AndroidUtilities;
 import org.telegram.messenger.AnimationNotificationsLocker;

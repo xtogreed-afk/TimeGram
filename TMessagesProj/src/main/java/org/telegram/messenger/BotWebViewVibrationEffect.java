@@ -5,7 +5,7 @@ import android.os.VibrationEffect;
 
 import androidx.annotation.RequiresApi;
 
-import com.exteragram.messenger.ExteraConfig;
+import com.timegram.messenger.ExteraConfig;
 
 public enum BotWebViewVibrationEffect {
     IMPACT_LIGHT(new long[] {7}, new int[] {65}, new long[] {60}),

@@ -81,8 +81,8 @@ import androidx.media3.exoplayer.audio.AudioCapabilities;
 import androidx.media3.exoplayer.source.MergingMediaSource;
 import androidx.media3.exoplayer.source.SingleSampleMediaSource;
 
-import com.exteragram.messenger.ExteraConfig;
-import com.exteragram.messenger.player.rhythm.RhythmTap;
+import com.timegram.messenger.ExteraConfig;
+import com.timegram.messenger.player.rhythm.RhythmTap;
 
 import org.telegram.messenger.AndroidUtilities;
 import org.telegram.messenger.ApplicationLoader;

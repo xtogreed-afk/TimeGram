@@ -38,7 +38,7 @@ import org.telegram.ui.Components.LayoutHelper;
 import org.telegram.ui.Components.RLottieImageView;
 import org.telegram.ui.Components.TextViewSwitcher;
 
-import com.exteragram.messenger.ExteraConfig;
+import com.timegram.messenger.ExteraConfig;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

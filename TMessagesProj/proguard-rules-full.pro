@@ -1,11 +1,11 @@
 # Plugins
--keep class com.exteragram.messenger.api.** { *; }
--keep class com.exteragram.messenger.plugins.** { *; }
+-keep class com.timegram.messenger.api.** { *; }
+-keep class com.timegram.messenger.plugins.** { *; }
 -keep class !org.telegram.messenger.R,!org.telegram.messenger.R$*,org.telegram.messenger.* { *; }
 -keep class org.telegram.messenger.R
 -keep class org.telegram.messenger.R$* { public static <fields>; }
 -keep class de.robv.android.xposed.** { *; }
--keep class com.exteragram.hook.ExteraHook { *; }
+-keep class com.timegram.hook.ExteraHook { *; }
 -keep class android_utils.** { *; }
 -keep class client_utils.** { *; }
 -keep class org.mvel2.** { *; }

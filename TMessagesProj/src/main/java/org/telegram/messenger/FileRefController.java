@@ -3,7 +3,7 @@ package org.telegram.messenger;
 import android.os.SystemClock;
 import android.util.Pair;
 
-import com.exteragram.messenger.updater.UpdaterUtils;
+import com.timegram.messenger.updater.UpdaterUtils;
 
 import org.telegram.tgnet.RequestDelegate;
 import org.telegram.tgnet.TLObject;

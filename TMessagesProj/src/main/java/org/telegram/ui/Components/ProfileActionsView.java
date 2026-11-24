@@ -41,13 +41,13 @@ import androidx.core.math.MathUtils;
 import androidx.dynamicanimation.animation.FloatPropertyCompat;
 import androidx.dynamicanimation.animation.SpringAnimation;
 
-import com.exteragram.messenger.DividerStyle;
-import com.exteragram.messenger.ExteraConfig;
-import com.exteragram.messenger.IconPackType;
-import com.exteragram.messenger.icons.IconManager;
-import com.exteragram.messenger.utils.system.VibratorUtils;
-import com.exteragram.messenger.utils.ui.MonetUtils;
-import com.exteragram.messenger.utils.ui.ProfileUiHelper;
+import com.timegram.messenger.DividerStyle;
+import com.timegram.messenger.ExteraConfig;
+import com.timegram.messenger.IconPackType;
+import com.timegram.messenger.icons.IconManager;
+import com.timegram.messenger.utils.system.VibratorUtils;
+import com.timegram.messenger.utils.ui.MonetUtils;
+import com.timegram.messenger.utils.ui.ProfileUiHelper;
 
 import org.telegram.messenger.AndroidUtilities;
 import org.telegram.messenger.R;

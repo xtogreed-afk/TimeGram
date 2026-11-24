@@ -112,7 +112,7 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import com.exteragram.messenger.utils.chats.ChatUtils;
+import com.timegram.messenger.utils.chats.ChatUtils;
 
 public class StickersAlert extends BottomSheet implements NotificationCenter.NotificationCenterDelegate {
 

@@ -5,8 +5,8 @@ import android.media.MediaMetadataRetriever;
 
 import androidx.media3.exoplayer.MetadataRetriever;
 
-import com.exteragram.messenger.player.CoverDecoder;
-import com.exteragram.messenger.player.lyrics.VorbisComments;
+import com.timegram.messenger.player.CoverDecoder;
+import com.timegram.messenger.player.lyrics.VorbisComments;
 
 import org.telegram.messenger.FileLog;
 

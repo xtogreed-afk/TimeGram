@@ -39,7 +39,7 @@ import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
 import androidx.core.graphics.ColorUtils;
 
-import com.exteragram.messenger.utils.chats.GlassMenuHelper;
+import com.timegram.messenger.utils.chats.GlassMenuHelper;
 
 import org.telegram.messenger.AndroidUtilities;
 import org.telegram.messenger.AnimationNotificationsLocker;

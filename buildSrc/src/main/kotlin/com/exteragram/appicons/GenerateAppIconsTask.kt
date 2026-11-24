@@ -1,4 +1,4 @@
-package com.exteragram.appicons
+package com.timegram.appicons
 
 import com.android.ide.common.vectordrawable.Svg2Vector
 import org.gradle.api.DefaultTask

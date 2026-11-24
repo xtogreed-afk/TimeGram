@@ -31,7 +31,7 @@ import androidx.annotation.Nullable;
 import androidx.camera.core.SurfaceRequest;
 import androidx.core.content.ContextCompat;
 
-import com.exteragram.messenger.camera.CameraXSession;
+import com.timegram.messenger.camera.CameraXSession;
 
 import java.io.IOException;
 

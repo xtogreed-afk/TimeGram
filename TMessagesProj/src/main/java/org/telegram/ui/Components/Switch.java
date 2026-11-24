@@ -36,7 +36,7 @@ import androidx.annotation.Keep;
 import androidx.dynamicanimation.animation.FloatPropertyCompat;
 import androidx.dynamicanimation.animation.SpringAnimation;
 
-import com.exteragram.messenger.utils.ui.material.SwitchUiHelper;
+import com.timegram.messenger.utils.ui.material.SwitchUiHelper;
 
 import org.telegram.messenger.AndroidUtilities;
 import org.telegram.messenger.Utilities;

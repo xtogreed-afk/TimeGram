@@ -32,17 +32,17 @@ import androidx.core.graphics.Insets;
 import androidx.core.math.MathUtils;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.exteragram.messenger.ExteraConfig;
-import com.exteragram.messenger.config.BottomNavigationBar;
-import com.exteragram.messenger.feed.FeedController;
-import com.exteragram.messenger.feed.ui.FeedActivity;
-import com.exteragram.messenger.feed.ui.FeedChannelsActivity;
-import com.exteragram.messenger.drawer.MainMenuItem;
-import com.exteragram.messenger.utils.chats.ChatUtils;
-import com.exteragram.messenger.drawer.MainMenuHelper;
-import com.exteragram.messenger.utils.ui.AccountsUiHelper;
-import com.exteragram.messenger.utils.ui.tabs.MainTabsUiHelper;
-import com.exteragram.messenger.utils.ui.tabs.TabsVisibilityAnimator;
+import com.timegram.messenger.ExteraConfig;
+import com.timegram.messenger.config.BottomNavigationBar;
+import com.timegram.messenger.feed.FeedController;
+import com.timegram.messenger.feed.ui.FeedActivity;
+import com.timegram.messenger.feed.ui.FeedChannelsActivity;
+import com.timegram.messenger.drawer.MainMenuItem;
+import com.timegram.messenger.utils.chats.ChatUtils;
+import com.timegram.messenger.drawer.MainMenuHelper;
+import com.timegram.messenger.utils.ui.AccountsUiHelper;
+import com.timegram.messenger.utils.ui.tabs.MainTabsUiHelper;
+import com.timegram.messenger.utils.ui.tabs.TabsVisibilityAnimator;
 
 import org.telegram.messenger.AccountInstance;
 import org.telegram.messenger.AndroidUtilities;

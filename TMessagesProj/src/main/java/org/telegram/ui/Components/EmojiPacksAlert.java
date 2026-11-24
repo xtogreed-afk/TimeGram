@@ -45,12 +45,12 @@ import androidx.core.math.MathUtils;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.exteragram.messenger.api.dto.BadgeDTO;
-import com.exteragram.messenger.badges.BadgesController;
-import com.exteragram.messenger.utils.chats.ChatUtils;
+import com.timegram.messenger.api.dto.BadgeDTO;
+import com.timegram.messenger.badges.BadgesController;
+import com.timegram.messenger.utils.chats.ChatUtils;
 
-import com.exteragram.messenger.utils.text.LocaleUtils;
-import com.exteragram.messenger.utils.system.VibratorUtils;
+import com.timegram.messenger.utils.text.LocaleUtils;
+import com.timegram.messenger.utils.system.VibratorUtils;
 import org.telegram.messenger.AndroidUtilities;
 import org.telegram.messenger.DocumentObject;
 import org.telegram.messenger.FileLoader;

@@ -23,7 +23,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 
-import com.exteragram.messenger.utils.ui.GlassProgressiveBlur;
+import com.timegram.messenger.utils.ui.GlassProgressiveBlur;
 
 import org.intellij.lang.annotations.Language;
 import org.telegram.messenger.BuildVars;

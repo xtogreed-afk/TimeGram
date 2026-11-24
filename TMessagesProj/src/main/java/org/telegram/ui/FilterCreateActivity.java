@@ -46,9 +46,9 @@ import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.exteragram.messenger.components.IconSelectorAlert;
-import com.exteragram.messenger.utils.folders.FolderRoles;
-import com.exteragram.messenger.utils.folders.FolderUiHelper;
+import com.timegram.messenger.components.IconSelectorAlert;
+import com.timegram.messenger.utils.folders.FolderRoles;
+import com.timegram.messenger.utils.folders.FolderUiHelper;
 
 import org.telegram.messenger.AndroidUtilities;
 import org.telegram.messenger.ApplicationLoader;

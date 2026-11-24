@@ -71,8 +71,8 @@ import java.util.Locale;
 import java.util.Objects;
 import java.util.TimeZone;
 
-import com.exteragram.messenger.ExteraConfig;
-import com.exteragram.messenger.utils.text.LocaleUtils;
+import com.timegram.messenger.ExteraConfig;
+import com.timegram.messenger.utils.text.LocaleUtils;
 
 public class LocaleController {
 

@@ -28,7 +28,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.StringRes;
 import androidx.core.graphics.ColorUtils;
 
-import com.exteragram.messenger.utils.text.LocaleUtils;
+import com.timegram.messenger.utils.text.LocaleUtils;
 
 import org.telegram.messenger.AndroidUtilities;
 import org.telegram.messenger.ApplicationLoader;

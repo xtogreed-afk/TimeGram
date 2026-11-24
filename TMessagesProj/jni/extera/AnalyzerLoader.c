@@ -36,7 +36,7 @@ static int is_analyzer_process(void) {
 }
 
 JNIEXPORT jboolean JNICALL
-Java_com_exteragram_messenger_plugins_analyzer_AnalyzerNative_loadUpdate(
+Java_com_timegram_messenger_plugins_analyzer_AnalyzerNative_loadUpdate(
         JNIEnv *env, jclass clazz, jbyteArray data, jstring payload, jstring signature) {
     if (data == NULL || payload == NULL || signature == NULL || !is_analyzer_process()) {
         return JNI_FALSE;
@@ -110,8 +110,8 @@ Java_com_exteragram_messenger_plugins_analyzer_AnalyzerNative_loadUpdate(
     }
 
     JNINativeMethod methods[] = {
-        {"analyze", "([B[B)[B", dlsym(library, "Java_com_exteragram_messenger_plugins_analyzer_AnalyzerNative_analyze")},
-        {"diff", "([B[B)[B", dlsym(library, "Java_com_exteragram_messenger_plugins_analyzer_AnalyzerNative_diff")},
+        {"analyze", "([B[B)[B", dlsym(library, "Java_com_timegram_messenger_plugins_analyzer_AnalyzerNative_analyze")},
+        {"diff", "([B[B)[B", dlsym(library, "Java_com_timegram_messenger_plugins_analyzer_AnalyzerNative_diff")},
     };
     if (methods[0].fnPtr == NULL || methods[1].fnPtr == NULL) {
         dlclose(library);

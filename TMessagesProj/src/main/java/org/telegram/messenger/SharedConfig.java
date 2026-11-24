@@ -28,7 +28,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.core.content.pm.ShortcutManagerCompat;
 
-import com.exteragram.messenger.proxy.ProxyController;
+import com.timegram.messenger.proxy.ProxyController;
 
 import org.json.JSONObject;
 import org.telegram.utils.proxy.ProxySettings;

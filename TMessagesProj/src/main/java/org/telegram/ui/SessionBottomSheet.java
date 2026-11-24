@@ -40,7 +40,7 @@ import org.telegram.ui.Components.RLottieImageView;
 import org.telegram.ui.Components.Switch;
 import org.telegram.ui.Stories.recorder.ButtonWithCounterView;
 
-import com.exteragram.messenger.utils.ui.UIUtil;
+import com.timegram.messenger.utils.ui.UIUtil;
 
 public class SessionBottomSheet extends BottomSheet {
 

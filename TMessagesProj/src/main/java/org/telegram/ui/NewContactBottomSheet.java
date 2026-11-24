@@ -54,7 +54,7 @@ import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
-import com.exteragram.messenger.utils.system.VibratorUtils;
+import com.timegram.messenger.utils.system.VibratorUtils;
 import androidx.core.app.ActivityCompat;
 
 import org.telegram.PhoneFormat.PhoneFormat;

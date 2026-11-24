@@ -37,7 +37,7 @@ import android.widget.FrameLayout;
 import androidx.core.graphics.ColorUtils;
 import androidx.core.math.MathUtils;
 
-import com.exteragram.messenger.utils.ui.material.ColorTones;
+import com.timegram.messenger.utils.ui.material.ColorTones;
 
 import org.telegram.messenger.AndroidUtilities;
 import org.telegram.messenger.FileLog;

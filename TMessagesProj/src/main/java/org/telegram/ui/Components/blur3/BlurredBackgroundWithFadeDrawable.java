@@ -1,6 +1,6 @@
 package org.telegram.ui.Components.blur3;
 
-import static com.exteragram.messenger.debug.DebugConfig.getDisableChatFadeWallpaperBlend;
+import static com.timegram.messenger.debug.DebugConfig.getDisableChatFadeWallpaperBlend;
 
 import static org.telegram.messenger.AndroidUtilities.dp;
 import static org.telegram.messenger.AndroidUtilities.lerp;

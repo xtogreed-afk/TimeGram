@@ -2,7 +2,7 @@ package org.telegram.ui.web;
 
 import android.util.LongSparseArray;
 
-import com.exteragram.messenger.export.ui.ExportBrowser;
+import com.timegram.messenger.export.ui.ExportBrowser;
 
 import org.telegram.messenger.AndroidUtilities;
 import org.telegram.messenger.FileLoader;

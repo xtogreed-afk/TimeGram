@@ -51,7 +51,7 @@ import androidx.viewpager.widget.ViewPager;
 
 import androidx.media3.exoplayer.ExoPlayer;
 
-import com.exteragram.messenger.ExteraConfig;
+import com.timegram.messenger.ExteraConfig;
 
 import org.telegram.ui.AspectRatioFrameLayout;
 

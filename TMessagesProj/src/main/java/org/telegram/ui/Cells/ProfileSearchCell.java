@@ -74,10 +74,10 @@ import org.telegram.ui.community.CommunityUtils;
 import java.util.Locale;
 import java.util.HashSet;
 
-import com.exteragram.messenger.AvatarCornerType;
-import com.exteragram.messenger.ExteraConfig;
-import com.exteragram.messenger.api.dto.BadgeDTO;
-import com.exteragram.messenger.badges.BadgesController;
+import com.timegram.messenger.AvatarCornerType;
+import com.timegram.messenger.ExteraConfig;
+import com.timegram.messenger.api.dto.BadgeDTO;
+import com.timegram.messenger.badges.BadgesController;
 
 public class ProfileSearchCell extends BaseCell implements NotificationCenter.NotificationCenterDelegate, Theme.Colorable {
 

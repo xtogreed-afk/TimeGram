@@ -15,7 +15,7 @@ import androidx.annotation.NonNull;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.exteragram.messenger.config.BottomNavigationBar;
+import com.timegram.messenger.config.BottomNavigationBar;
 
 import org.telegram.messenger.AndroidUtilities;
 import org.telegram.ui.ActionBar.ActionBar;

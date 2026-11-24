@@ -65,10 +65,10 @@ import org.telegram.ui.Stories.StoriesListPlaceProvider;
 import org.telegram.ui.Stories.StoriesUtilities;
 import java.util.HashSet;
 
-import com.exteragram.messenger.AvatarCornerType;
-import com.exteragram.messenger.ExteraConfig;
-import com.exteragram.messenger.utils.folders.FolderRoles;
-import com.exteragram.messenger.badges.BadgesController;
+import com.timegram.messenger.AvatarCornerType;
+import com.timegram.messenger.ExteraConfig;
+import com.timegram.messenger.utils.folders.FolderRoles;
+import com.timegram.messenger.badges.BadgesController;
 
 import java.util.ArrayList;
 

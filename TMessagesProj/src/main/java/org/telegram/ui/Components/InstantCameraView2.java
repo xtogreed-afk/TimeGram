@@ -32,8 +32,8 @@ import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
 
-import com.exteragram.messenger.camera.InstantCameraZoomSlider;
-import com.exteragram.messenger.camera.RoundVideoUiHelper;
+import com.timegram.messenger.camera.InstantCameraZoomSlider;
+import com.timegram.messenger.camera.RoundVideoUiHelper;
 
 import org.telegram.messenger.AndroidUtilities;
 import org.telegram.messenger.ApplicationLoader;

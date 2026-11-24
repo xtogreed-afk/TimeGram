@@ -96,10 +96,10 @@ import java.util.HashMap;
 import me.vkryl.android.animator.BoolAnimator;
 import me.vkryl.android.animator.FactorAnimator;
 
-import com.exteragram.messenger.AvatarCornerType;
-import com.exteragram.messenger.ExteraConfig;
-import com.exteragram.messenger.components.ActionRow;
-import com.exteragram.messenger.utils.chats.GlassMenuHelper;
+import com.timegram.messenger.AvatarCornerType;
+import com.timegram.messenger.ExteraConfig;
+import com.timegram.messenger.components.ActionRow;
+import com.timegram.messenger.utils.chats.GlassMenuHelper;
 
 public class ActionBarMenuItem extends FrameLayout {
 

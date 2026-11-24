@@ -26,7 +26,7 @@ import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
-import com.exteragram.messenger.utils.text.LocaleUtils;
+import com.timegram.messenger.utils.text.LocaleUtils;
 
 import org.telegram.messenger.AccountInstance;
 import org.telegram.messenger.AndroidUtilities;

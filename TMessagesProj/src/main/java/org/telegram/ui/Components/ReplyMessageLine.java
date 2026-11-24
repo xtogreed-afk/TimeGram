@@ -18,7 +18,7 @@ import android.view.View;
 import androidx.annotation.NonNull;
 import androidx.core.math.MathUtils;
 
-import com.exteragram.messenger.ExteraConfig;
+import com.timegram.messenger.ExteraConfig;
 
 import androidx.core.graphics.ColorUtils;
 

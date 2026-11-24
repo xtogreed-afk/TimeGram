@@ -12,7 +12,7 @@ import android.view.HapticFeedbackConstants;
 import android.view.MotionEvent;
 import android.view.ViewConfiguration;
 
-import com.exteragram.messenger.utils.system.VibratorUtils;
+import com.timegram.messenger.utils.system.VibratorUtils;
 import com.google.common.primitives.Floats;
 import com.google.zxing.common.detector.MathUtils;
 

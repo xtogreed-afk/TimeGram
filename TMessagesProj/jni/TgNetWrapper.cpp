@@ -815,7 +815,7 @@ void switchEnforce(JNIEnv *env, jclass c) {
     SensitiveRequestSwitch::enforce();
 }
 
-static const char *SensitiveRequestSwitchClassPathName = "com/exteragram/messenger/security/SensitiveRequestSwitch";
+static const char *SensitiveRequestSwitchClassPathName = "com/timegram/messenger/security/SensitiveRequestSwitch";
 static JNINativeMethod SensitiveRequestSwitchMethods[] = {
         {"native_init", "(Ljava/lang/String;)Z", (void *) switchInit},
         {"native_disableAt", "()J", (void *) switchDisableAt},
@@ -823,7 +823,7 @@ static JNINativeMethod SensitiveRequestSwitchMethods[] = {
         {"native_enforce", "()V", (void *) switchEnforce},
 };
 
-static const char *SensitiveRequestConfirmationClassPathName = "com/exteragram/messenger/security/SensitiveRequestConfirmation";
+static const char *SensitiveRequestConfirmationClassPathName = "com/timegram/messenger/security/SensitiveRequestConfirmation";
 static JNINativeMethod SensitiveRequestConfirmationMethods[] = {
         {"native_resolve", "(IIJZ)V", (void *) resolveSensitiveRequest},
         {"native_protectedConstructors", "()[I", (void *) protectedConstructors},
@@ -967,7 +967,7 @@ extern "C" int registerNativeTgNetFunctions(JavaVM *vm, JNIEnv *env) {
         return JNI_FALSE;
     }
 
-    jclass_SensitiveRequestConfirmation = (jclass) env->NewGlobalRef(env->FindClass("com/exteragram/messenger/security/SensitiveRequestConfirmation"));
+    jclass_SensitiveRequestConfirmation = (jclass) env->NewGlobalRef(env->FindClass("com/timegram/messenger/security/SensitiveRequestConfirmation"));
     if (jclass_SensitiveRequestConfirmation == 0) {
         return JNI_FALSE;
     }

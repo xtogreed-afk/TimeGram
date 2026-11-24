@@ -54,9 +54,9 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.LinearSmoothScroller;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.exteragram.messenger.ExteraConfig;
-import com.exteragram.messenger.TabIconsMode;
-import com.exteragram.messenger.utils.folders.FolderUiHelper;
+import com.timegram.messenger.ExteraConfig;
+import com.timegram.messenger.TabIconsMode;
+import com.timegram.messenger.utils.folders.FolderUiHelper;
 
 import org.telegram.messenger.AndroidUtilities;
 import org.telegram.messenger.Emoji;

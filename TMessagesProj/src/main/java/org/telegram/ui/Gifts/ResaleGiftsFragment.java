@@ -9,7 +9,7 @@ import static org.telegram.messenger.LocaleController.getString;
 import static org.telegram.messenger.Utilities.clamp01;
 import static org.telegram.ui.Stars.StarsController.findAttributes;
 
-import com.exteragram.messenger.utils.ui.GlassUiHelper;
+import com.timegram.messenger.utils.ui.GlassUiHelper;
 
 import org.telegram.messenger.FileLog;
 import android.animation.Animator;

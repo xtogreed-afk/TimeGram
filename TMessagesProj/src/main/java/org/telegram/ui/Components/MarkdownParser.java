@@ -5,7 +5,7 @@ import static org.telegram.messenger.AndroidUtilities.find;
 
 import android.text.TextUtils;
 
-import com.exteragram.messenger.utils.MarkdownUtils;
+import com.timegram.messenger.utils.MarkdownUtils;
 
 import org.commonmark.Extension;
 import org.commonmark.ext.gfm.strikethrough.Strikethrough;

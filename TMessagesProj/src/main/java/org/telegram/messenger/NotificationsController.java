@@ -66,11 +66,11 @@ import androidx.core.graphics.drawable.IconCompat;
 
 import com.google.common.collect.Lists;
 
-import com.exteragram.messenger.ExteraConfig;
-import com.exteragram.messenger.icons.IconManager;
-import com.exteragram.messenger.notifications.AccountNotifications;
-import com.exteragram.messenger.notifications.NotificationAvatars;
-import com.exteragram.messenger.utils.AppUtils;
+import com.timegram.messenger.ExteraConfig;
+import com.timegram.messenger.icons.IconManager;
+import com.timegram.messenger.notifications.AccountNotifications;
+import com.timegram.messenger.notifications.NotificationAvatars;
+import com.timegram.messenger.utils.AppUtils;
 
 import org.telegram.messenger.support.LongSparseIntArray;
 import org.telegram.messenger.utils.tlutils.TLKeyboardHelper;

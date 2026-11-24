@@ -2,7 +2,7 @@ package org.telegram.ui;
 
 import static org.telegram.messenger.AndroidUtilities.dp;
 
-import com.exteragram.messenger.utils.ui.GlassUiHelper;
+import com.timegram.messenger.utils.ui.GlassUiHelper;
 
 import org.telegram.messenger.FileLog;
 import android.content.Context;

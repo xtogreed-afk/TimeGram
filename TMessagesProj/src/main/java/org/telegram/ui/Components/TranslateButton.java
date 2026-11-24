@@ -29,7 +29,7 @@ import android.widget.TextView;
 
 //import com.google.mlkit.nl.translate.TranslateLanguage;
 
-import com.exteragram.messenger.translator.TranslationProviders;
+import com.timegram.messenger.translator.TranslationProviders;
 
 import org.telegram.messenger.AndroidUtilities;
 import org.telegram.messenger.ChatObject;

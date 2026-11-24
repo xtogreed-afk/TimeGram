@@ -21,7 +21,7 @@ import android.widget.TextView;
 import androidx.core.graphics.ColorUtils;
 
 import org.telegram.messenger.AndroidUtilities;
-import com.exteragram.messenger.utils.ui.UIUtil;
+import com.timegram.messenger.utils.ui.UIUtil;
 import org.telegram.messenger.FileLog;
 import org.telegram.messenger.ImageLocation;
 import org.telegram.messenger.LocaleController;

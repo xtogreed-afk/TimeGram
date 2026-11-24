@@ -47,7 +47,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.interpolator.view.animation.FastOutSlowInInterpolator;
 
-import com.exteragram.messenger.utils.text.LocaleUtils;
+import com.timegram.messenger.utils.text.LocaleUtils;
 import com.google.zxing.common.detector.MathUtils;
 
 import org.telegram.messenger.AndroidUtilities;

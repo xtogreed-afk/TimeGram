@@ -98,9 +98,9 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Objects;
 
-import com.exteragram.messenger.DividerStyle;
-import com.exteragram.messenger.ExteraConfig;
-import com.exteragram.messenger.utils.system.VibratorUtils;
+import com.timegram.messenger.DividerStyle;
+import com.timegram.messenger.ExteraConfig;
+import com.timegram.messenger.utils.system.VibratorUtils;
 
 @SuppressWarnings("JavaReflectionMemberAccess")
 public class RecyclerListView extends RecyclerView implements IBlur3Capture {

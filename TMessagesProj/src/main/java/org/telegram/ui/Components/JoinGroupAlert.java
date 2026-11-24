@@ -47,7 +47,7 @@ import org.telegram.ui.ChatActivity;
 
 import androidx.core.widget.NestedScrollView;
 
-import com.exteragram.messenger.ExteraConfig;
+import com.timegram.messenger.ExteraConfig;
 
 public class JoinGroupAlert extends BottomSheet {
 

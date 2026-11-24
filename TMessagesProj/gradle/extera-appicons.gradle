@@ -1,4 +1,4 @@
-import com.exteragram.appicons.GenerateAppIconsTask
+import com.timegram.appicons.GenerateAppIconsTask
 
 ext.generatedExteraAppIconsManifest = file("$projectDir/src/main/AndroidManifest-appicons.xml")
 
@@ -10,10 +10,10 @@ tasks.register("generateAppIcons", GenerateAppIconsTask) {
     colorFiles.from(file("$projectDir/src/main/res/values/colors.xml"))
     resDir.set(file("$projectDir/src/main/res-appicons"))
     manifestFile.set(generatedExteraAppIconsManifest)
-    registryFile.set(file("$projectDir/src/main/java/com/exteragram/messenger/appicons/GeneratedAppIcons.java"))
+    registryFile.set(file("$projectDir/src/main/java/com/timegram/messenger/appicons/GeneratedAppIcons.java"))
 
     componentPackage.set(APP_PACKAGE.toString())
-    registryPackage.set("com.exteragram.messenger.appicons")
+    registryPackage.set("com.timegram.messenger.appicons")
     resourcePackage.set("org.telegram.messenger")
 
     def overrides = [:]

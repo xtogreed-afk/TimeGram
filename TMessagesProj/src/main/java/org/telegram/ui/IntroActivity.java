@@ -54,7 +54,7 @@ import androidx.core.graphics.ColorUtils;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
-import com.exteragram.messenger.profilecolor.debug.ProfileColorDebugActivity;
+import com.timegram.messenger.profilecolor.debug.ProfileColorDebugActivity;
 
 import org.telegram.messenger.AndroidUtilities;
 import org.telegram.messenger.ApplicationLoader;

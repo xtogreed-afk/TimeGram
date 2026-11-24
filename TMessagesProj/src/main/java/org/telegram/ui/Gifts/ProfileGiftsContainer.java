@@ -53,7 +53,7 @@ import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.exteragram.messenger.profilecolor.ProfileColorTheme;
+import com.timegram.messenger.profilecolor.ProfileColorTheme;
 
 import org.telegram.messenger.AndroidUtilities;
 import org.telegram.messenger.BirthdayController;

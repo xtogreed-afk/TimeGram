@@ -23,7 +23,7 @@ def defaultAbiFlavors = ['arm64', 'x64'] as Set
 def enabledSingleAbiFlavors = requestedSingleAbiFlavors ?: defaultAbiFlavors
 
 android {
-    namespace = 'com.exteragram.messenger.baselineprofile'
+    namespace = 'com.timegram.messenger.baselineprofile'
     compileSdkVersion 37
 
     compileOptions {

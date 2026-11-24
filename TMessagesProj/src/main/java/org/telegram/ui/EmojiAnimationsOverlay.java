@@ -6,7 +6,7 @@ import android.view.HapticFeedbackConstants;
 import android.view.View;
 import android.widget.FrameLayout;
 
-import com.exteragram.messenger.utils.system.VibratorUtils;
+import com.timegram.messenger.utils.system.VibratorUtils;
 
 import androidx.annotation.Nullable;
 

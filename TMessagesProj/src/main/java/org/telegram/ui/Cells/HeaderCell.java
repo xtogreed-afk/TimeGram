@@ -23,7 +23,7 @@ import android.widget.TextView;
 
 import androidx.core.view.ViewCompat;
 
-import com.exteragram.messenger.ExteraConfig;
+import com.timegram.messenger.ExteraConfig;
 
 import org.telegram.messenger.AndroidUtilities;
 import org.telegram.messenger.LocaleController;

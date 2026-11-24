@@ -61,9 +61,9 @@ import androidx.dynamicanimation.animation.FloatValueHolder;
 import androidx.dynamicanimation.animation.SpringAnimation;
 import androidx.dynamicanimation.animation.SpringForce;
 
-import com.exteragram.messenger.ExteraConfig;
-import com.exteragram.messenger.GlassOutlineStyle;
-import com.exteragram.messenger.utils.ui.GlassUiHelper;
+import com.timegram.messenger.ExteraConfig;
+import com.timegram.messenger.GlassOutlineStyle;
+import com.timegram.messenger.utils.ui.GlassUiHelper;
 
 import org.telegram.messenger.AndroidUtilities;
 import org.telegram.messenger.ApplicationLoader;

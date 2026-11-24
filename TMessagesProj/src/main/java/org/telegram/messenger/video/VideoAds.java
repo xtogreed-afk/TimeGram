@@ -32,7 +32,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.exteragram.messenger.utils.network.RemoteUtils;
+import com.timegram.messenger.utils.network.RemoteUtils;
 
 import org.aspectj.lang.annotation.AdviceName;
 import org.telegram.messenger.AndroidUtilities;

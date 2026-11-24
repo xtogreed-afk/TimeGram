@@ -87,8 +87,8 @@ import androidx.dynamicanimation.animation.DynamicAnimation;
 import androidx.dynamicanimation.animation.SpringAnimation;
 import androidx.interpolator.view.animation.FastOutSlowInInterpolator;
 
-import com.exteragram.messenger.ExteraConfig;
-import com.exteragram.messenger.utils.system.SystemUtils;
+import com.timegram.messenger.ExteraConfig;
+import com.timegram.messenger.utils.system.SystemUtils;
 
 import org.telegram.messenger.AndroidUtilities;
 import org.telegram.messenger.AnimationNotificationsLocker;

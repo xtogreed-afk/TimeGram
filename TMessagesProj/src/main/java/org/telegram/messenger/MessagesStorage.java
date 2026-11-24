@@ -29,9 +29,9 @@ import android.util.SparseIntArray;
 import androidx.annotation.UiThread;
 import androidx.collection.LongSparseArray;
 
-import com.exteragram.messenger.feed.FeedController;
-import com.exteragram.messenger.utils.folders.FolderCounters;
-import com.exteragram.messenger.utils.text.LocaleUtils;
+import com.timegram.messenger.feed.FeedController;
+import com.timegram.messenger.utils.folders.FolderCounters;
+import com.timegram.messenger.utils.text.LocaleUtils;
 
 import org.telegram.PhoneFormat.PhoneFormat;
 import org.telegram.SQLite.SQLiteCursor;

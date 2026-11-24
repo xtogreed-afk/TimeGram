@@ -63,7 +63,7 @@ import java.util.Locale;
 import java.util.Stack;
 import java.util.concurrent.atomic.AtomicReference;
 
-import com.exteragram.messenger.utils.text.LocaleUtils;
+import com.timegram.messenger.utils.text.LocaleUtils;
 
 public class SharedLinkCell extends FrameLayout implements Theme.Colorable {
 

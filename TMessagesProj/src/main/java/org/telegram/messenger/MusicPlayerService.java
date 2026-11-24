@@ -37,9 +37,9 @@ import android.widget.RemoteViews;
 import androidx.core.app.NotificationCompat;
 import androidx.media3.common.C;
 
-import com.exteragram.messenger.icons.IconManager;
-import com.exteragram.messenger.player.PlayerLauncher;
-import com.exteragram.messenger.utils.AppUtils;
+import com.timegram.messenger.icons.IconManager;
+import com.timegram.messenger.player.PlayerLauncher;
+import com.timegram.messenger.utils.AppUtils;
 
 import org.telegram.messenger.audioinfo.AudioInfo;
 import org.telegram.tgnet.TLObject;

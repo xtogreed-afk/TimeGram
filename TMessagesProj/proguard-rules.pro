@@ -60,8 +60,8 @@
 }
 
 # AdBlock
--keep class com.exteragram.messenger.adblock.interop.** { *; }
--keep class com.exteragram.messenger.adblock.data.** { *; }
+-keep class com.timegram.messenger.adblock.interop.** { *; }
+-keep class com.timegram.messenger.adblock.data.** { *; }
 
 -keep,allowobfuscation,allowshrinking interface retrofit2.Call
 -keep,allowobfuscation,allowshrinking class retrofit2.Response
@@ -102,9 +102,9 @@
      public static ** valueOf(java.lang.String);
 }
 
--keep class com.exteragram.messenger.utils.network.ExchangeRates$State { *; }
--keep class com.exteragram.messenger.utils.network.ExchangeRates$CoinbaseResponse { *; }
--keep class com.exteragram.messenger.utils.network.ExchangeRates$Data { *; }
+-keep class com.timegram.messenger.utils.network.ExchangeRates$State { *; }
+-keep class com.timegram.messenger.utils.network.ExchangeRates$CoinbaseResponse { *; }
+-keep class com.timegram.messenger.utils.network.ExchangeRates$Data { *; }
 
 -keep class org.telegram.utils.code.highlight.PrismaHighlighter {
     private static native <methods>;
@@ -151,14 +151,14 @@
 
 -keepnames class ** extends org.telegram.ui.ActionBar.BaseFragment
 
--keep class ** extends com.exteragram.messenger.preferences.BasePreferencesActivity {
+-keep class ** extends com.timegram.messenger.preferences.BasePreferencesActivity {
     <init>();
 }
 
--keep class com.exteragram.messenger.security.SensitiveRequestConfirmation {
+-keep class com.timegram.messenger.security.SensitiveRequestConfirmation {
     private static native <methods>;
     public static void request(int, int, int, long, long[], java.lang.String[], java.lang.String);
 }
--keep class com.exteragram.messenger.security.SensitiveRequestSwitch {
+-keep class com.timegram.messenger.security.SensitiveRequestSwitch {
     private static native <methods>;
 }

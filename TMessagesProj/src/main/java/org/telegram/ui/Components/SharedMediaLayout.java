@@ -76,13 +76,13 @@ import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.exteragram.messenger.ExteraFileHandler;
-import com.exteragram.messenger.profilecolor.ProfileColorTheme;
-import com.exteragram.messenger.utils.chats.ForwardContext;
-import com.exteragram.messenger.utils.AppUtils;
-import com.exteragram.messenger.utils.text.LocaleUtils;
-import com.exteragram.messenger.utils.ui.ProfileUiHelper;
-import com.exteragram.messenger.utils.ui.GlassUiHelper;
+import com.timegram.messenger.ExteraFileHandler;
+import com.timegram.messenger.profilecolor.ProfileColorTheme;
+import com.timegram.messenger.utils.chats.ForwardContext;
+import com.timegram.messenger.utils.AppUtils;
+import com.timegram.messenger.utils.text.LocaleUtils;
+import com.timegram.messenger.utils.ui.ProfileUiHelper;
+import com.timegram.messenger.utils.ui.GlassUiHelper;
 
 import org.telegram.messenger.AndroidUtilities;
 import org.telegram.messenger.AnimationNotificationsLocker;

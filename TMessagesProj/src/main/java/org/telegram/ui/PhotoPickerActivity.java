@@ -104,9 +104,9 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.HashMap;
 
-import com.exteragram.messenger.ExteraConfig;
-import com.exteragram.messenger.utils.ui.UIUtil;
-import com.exteragram.messenger.utils.text.LocaleUtils;
+import com.timegram.messenger.ExteraConfig;
+import com.timegram.messenger.utils.ui.UIUtil;
+import com.timegram.messenger.utils.text.LocaleUtils;
 
 public class PhotoPickerActivity extends BaseFragment implements NotificationCenter.NotificationCenterDelegate {
 

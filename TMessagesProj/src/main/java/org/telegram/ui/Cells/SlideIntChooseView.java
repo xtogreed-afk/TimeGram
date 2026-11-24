@@ -21,7 +21,7 @@ import android.widget.FrameLayout;
 
 import androidx.annotation.NonNull;
 
-import com.exteragram.messenger.utils.ui.SliderHapticsHelper;
+import com.timegram.messenger.utils.ui.SliderHapticsHelper;
 
 import org.telegram.messenger.AndroidUtilities;
 import org.telegram.messenger.FileLog;

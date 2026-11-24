@@ -51,14 +51,14 @@ import androidx.core.app.NotificationManagerCompat;
 import androidx.core.graphics.ColorUtils;
 import androidx.core.util.Consumer;
 
-import com.exteragram.messenger.ExteraConfig;
-import com.exteragram.messenger.plugins.hooks.PluginsHooks;
-import com.exteragram.messenger.plugins.PluginsController;
-import com.exteragram.messenger.regdate.RegDateController;
-import com.exteragram.messenger.utils.folders.FolderRoles;
-import com.exteragram.messenger.utils.chats.PeerSettingsPrefs;
-import com.exteragram.messenger.utils.ui.MonetUtils;
-import com.exteragram.messenger.utils.network.RemoteUtils;
+import com.timegram.messenger.ExteraConfig;
+import com.timegram.messenger.plugins.hooks.PluginsHooks;
+import com.timegram.messenger.plugins.PluginsController;
+import com.timegram.messenger.regdate.RegDateController;
+import com.timegram.messenger.utils.folders.FolderRoles;
+import com.timegram.messenger.utils.chats.PeerSettingsPrefs;
+import com.timegram.messenger.utils.ui.MonetUtils;
+import com.timegram.messenger.utils.network.RemoteUtils;
 
 import org.telegram.SQLite.SQLiteCursor;
 import org.telegram.SQLite.SQLiteDatabase;

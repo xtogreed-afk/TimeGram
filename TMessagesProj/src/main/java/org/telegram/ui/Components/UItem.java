@@ -6,10 +6,10 @@ import android.text.TextUtils;
 import android.util.LongSparseArray;
 import android.view.View;
 
-import com.exteragram.messenger.plugins.models.SettingItem;
-import com.exteragram.messenger.preferences.BasePreferencesActivity;
-import com.exteragram.messenger.preferences.utils.SettingsRegistry;
-import com.exteragram.messenger.preferences.components.CustomPreferenceCell;
+import com.timegram.messenger.plugins.models.SettingItem;
+import com.timegram.messenger.preferences.BasePreferencesActivity;
+import com.timegram.messenger.preferences.utils.SettingsRegistry;
+import com.timegram.messenger.preferences.components.CustomPreferenceCell;
 
 import org.telegram.messenger.MessageObject;
 import org.telegram.messenger.Utilities;

@@ -20,7 +20,7 @@ import android.view.animation.DecelerateInterpolator;
 import androidx.annotation.Keep;
 import androidx.annotation.NonNull;
 
-import com.exteragram.messenger.ExteraConfig;
+import com.timegram.messenger.ExteraConfig;
 import com.google.android.material.loadingindicator.LoadingIndicator;
 import com.google.android.material.progressindicator.CircularProgressIndicator;
 

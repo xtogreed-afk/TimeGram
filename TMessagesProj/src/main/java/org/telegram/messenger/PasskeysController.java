@@ -22,7 +22,7 @@ import androidx.credentials.exceptions.GetCredentialException;
 import androidx.credentials.exceptions.GetCredentialInterruptedException;
 import androidx.credentials.exceptions.NoCredentialException;
 
-import com.exteragram.messenger.utils.PasskeysUtil;
+import com.timegram.messenger.utils.PasskeysUtil;
 
 import org.json.JSONObject;
 import org.telegram.tgnet.ConnectionsManager;
