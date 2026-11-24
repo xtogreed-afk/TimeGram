@@ -1,65 +1,52 @@
-name: Build TimeGram APK
-
+name: Build
 on:
+  push:
+    branches: [ main, rebrand ]
   workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
           submodules: recursive
-
-      - name: Set up JDK 17
-        uses: actions/setup-java@v4
+      - uses: actions/setup-java@v4
         with:
           distribution: temurin
-          java-version: "17"
-
-      - name: Set up Python 3.11
-        uses: actions/setup-python@v5
+          java-version: 17
+          cache: gradle
+      - uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
-
-      - name: Decode release keystore
-        env:
-          KEYSTORE_BASE64: ${{ secrets.KEYSTORE_BASE64 }}
+          python-version: '3.11'
+      - name: Install SDK and NDK
         run: |
-          echo "$KEYSTORE_BASE64" | tr -d '\n\r ' | base64 -d > TMessagesProj/config/exteraGram.jks
-
-      - name: Configure API keys and signing
+          yes | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --licenses > /dev/null
+          $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager "platforms;android-36" "ndk;29.0.14206865"
+      - name: Secrets
         env:
           APP_ID: ${{ secrets.APP_ID }}
           APP_HASH: ${{ secrets.APP_HASH }}
+          KEYSTORE_BASE64: ${{ secrets.KEYSTORE_BASE64 }}
           KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
           KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
           KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
         run: |
-          cat > API_KEYS <<EOF
-          APP_ID = ${APP_ID}
-          APP_HASH = "${APP_HASH}"
-          MAPS_V2_API = dummy
-          SIGNING_KEY_STORE_PASSWORD = ${KEYSTORE_PASSWORD}
-          SIGNING_KEY_ALIAS = ${KEY_ALIAS}
-          SIGNING_KEY_PASSWORD = ${KEY_PASSWORD}
-          EOF
-
-      - name: Grant execute permission for gradlew
-        run: chmod +x ./gradlew
-
-      - name: Build APK
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
-        run: ./gradlew :TMessagesProj:assembleFullArm64Release --stacktrace
-
-      - name: Upload APK artifact
-        uses: actions/upload-artifact@v4
+          {
+            echo "APP_ID = $APP_ID"
+            echo "APP_HASH = \"$APP_HASH\""
+            echo "MAPS_V2_API = "
+            echo "SIGNING_KEY_PASSWORD = $KEY_PASSWORD"
+            echo "SIGNING_KEY_ALIAS = $KEY_ALIAS"
+            echo "SIGNING_KEY_STORE_PASSWORD = $KEYSTORE_PASSWORD"
+          } > API_KEYS
+          mkdir -p TMessagesProj/config
+          echo "$KEYSTORE_BASE64" | base64 -d > TMessagesProj/config/TimeGram.jks
+      - name: Build
+        run: |
+          chmod +x gradlew
+          ./gradlew :TMessagesProj:assembleFullArm64Debug --stacktrace
+      - uses: actions/upload-artifact@v4
         with:
-          name: TimeGram-release-apk
-          path: |
-            **/*.apk
-            !**/build/intermediates/**
-          if-no-files-found: warn
+          name: TimeGram-apk
+          path: TMessagesProj/build/outputs/apk/**/*.apk
