@@ -103,7 +103,7 @@
 
     <application
         android:name=".ApplicationLoader"
-        android:label="@string/exteraAppName"
+        android:label="TimeGram"
         android:allowBackup="true"
         android:restoreAnyVersion="true"
         android:backupAgent=".BackupAgent"

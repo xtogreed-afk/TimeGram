@@ -78,9 +78,9 @@ import androidx.media3.exoplayer.ExoPlayer;
 import androidx.media3.extractor.jpeg.MotionPhotoDescription;
 import androidx.media3.extractor.jpeg.XmpMotionPhotoDescriptionParser;
 
-import com.exteragram.messenger.ExteraConfig;
-import com.exteragram.messenger.player.AudioInfoCache;
-import com.exteragram.messenger.utils.system.SystemUtils;
+import com.timegram.messenger.ExteraConfig;
+import com.timegram.messenger.player.AudioInfoCache;
+import com.timegram.messenger.utils.system.SystemUtils;
 
 import com.google.android.gms.cast.MediaMetadata;
 import com.google.android.gms.common.images.WebImage;
