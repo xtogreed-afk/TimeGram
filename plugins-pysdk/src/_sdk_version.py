@@ -116,7 +116,7 @@ def _reset_state():
     SafeModeImporter.E = False
 
 def check_safemode():
-    from com.exteragram.messenger import ExteraConfig
+    from com.timegram.messenger import ExteraConfig
     from org.telegram.messenger import BuildVars
 
     if BuildVars.BUILD_VERSION < 65819:
@@ -136,13 +136,13 @@ def setup_hooks():
     unhooks = []
 
     try:
-        from com.exteragram.messenger.plugins import PluginsController
+        from com.timegram.messenger.plugins import PluginsController
         from java.lang import String
         from de.robv.android.xposed import XposedBridge
-        from com.exteragram.messenger.plugins.xposed import PyMethodHook
+        from com.timegram.messenger.plugins.xposed import PyMethodHook
 
         if BuildVars.BUILD_VERSION < 66999:
-            from com.exteragram.messenger.plugins import PythonPluginsEngine
+            from com.timegram.messenger.plugins import PythonPluginsEngine
             from com.chaquo.python import PyObject
             from extera_utils.classes import Base, java_subclass, jmvelmethod
             from java.lang import Object
@@ -208,7 +208,7 @@ def __start__():
         return True
     except:
         import traceback
-        from com.exteragram.messenger.utils import AppUtils
+        from com.timegram.messenger.utils import AppUtils
 
         AppUtils.log("[Plugins-PySdk] Failed to initialize sdk: " + traceback.format_exc())
         return False

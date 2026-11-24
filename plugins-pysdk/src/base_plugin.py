@@ -32,9 +32,9 @@ if TYPE_CHECKING:
 import plugin_settings
 from android_utils import log
 from log_utils import Logger, _plugin_logger, _reset_plugin_logger
-from com.exteragram.messenger.plugins import PluginsController, PluginsConstants
-from com.exteragram.messenger.plugins.hooks import HookFilter as JavaHookFilter
-from com.exteragram.messenger.plugins.xposed import PyMethodHook, PyMethodReplacement
+from com.timegram.messenger.plugins import PluginsController, PluginsConstants
+from com.timegram.messenger.plugins.hooks import HookFilter as JavaHookFilter
+from com.timegram.messenger.plugins.xposed import PyMethodHook, PyMethodReplacement
 
 
 @dataclass
@@ -136,7 +136,7 @@ def _partial_api():
     if _PARTIAL_API is not None:
         return _PARTIAL_API
     try:
-        from com.exteragram.hook import ExteraHook, HookTarget, InstructionMatcher, Interceptor
+        from com.timegram.hook import ExteraHook, HookTarget, InstructionMatcher, Interceptor
         from java import dynamic_proxy, jarray
         from java.lang import Object as JavaObject
     except ImportError as e:

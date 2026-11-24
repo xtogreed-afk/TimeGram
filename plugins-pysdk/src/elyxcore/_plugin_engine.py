@@ -24,13 +24,13 @@ from zipfile import BadZipFile, ZipFile
 
 from androidx.core.content import ContextCompat
 from com.chaquo.python import PyException
-from com.exteragram.messenger.plugins import Plugin, PluginsController
-from com.exteragram.messenger.plugins.hooks import PluginsHooks
-from com.exteragram.messenger.plugins.models import CustomSetting, DividerSetting, EditTextSetting, HeaderSetting, \
+from com.timegram.messenger.plugins import Plugin, PluginsController
+from com.timegram.messenger.plugins.hooks import PluginsHooks
+from com.timegram.messenger.plugins.models import CustomSetting, DividerSetting, EditTextSetting, HeaderSetting, \
     InputSetting, SelectorSetting, SwitchSetting, TextSetting
-from com.exteragram.messenger.plugins.pip import PipController
-from com.exteragram.messenger.plugins.ui import PluginSettingsActivity, PluginsActivity
-from com.exteragram.messenger.plugins.ui.components import InstallPluginBottomSheet, PluginCellDelegate, \
+from com.timegram.messenger.plugins.pip import PipController
+from com.timegram.messenger.plugins.ui import PluginSettingsActivity, PluginsActivity
+from com.timegram.messenger.plugins.ui.components import InstallPluginBottomSheet, PluginCellDelegate, \
     PluginFileViewer, PluginRequirementsView
 from de.robv.android.xposed import XposedBridge
 from org.mvel2 import MVEL
@@ -368,8 +368,8 @@ class ElyxEngine(Base):
         except:
             pass
 
-        from com.exteragram.messenger.plugins.xposed import PyMethodHook
-        from com.exteragram.messenger.plugins.ui import PluginsInfoActivity
+        from com.timegram.messenger.plugins.xposed import PyMethodHook
+        from com.timegram.messenger.plugins.ui import PluginsInfoActivity
         from org.telegram.ui.Components import UniversalAdapter
         from java.lang import Integer, Float
 

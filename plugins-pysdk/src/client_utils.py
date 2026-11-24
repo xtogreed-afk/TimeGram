@@ -39,7 +39,7 @@ from org.telegram.messenger import (
 from org.telegram.tgnet import RequestDelegate, TLObject, TLRPC
 from org.telegram.ui import LaunchActivity
 
-from com.exteragram.messenger.plugins import PluginsController
+from com.timegram.messenger.plugins import PluginsController
 from android_utils import R as Runnable
 from android_utils import log, run_on_ui_thread
 from java import dynamic_proxy, jarray, jbyte

@@ -21,7 +21,7 @@ import traceback
 import weakref
 from typing import Optional
 
-from com.exteragram.messenger.plugins.utils import ClassProxy as CP  # type: ignore
+from com.timegram.messenger.plugins.utils import ClassProxy as CP  # type: ignore
 from java import dynamic_proxy, jarray, jclass, jvoid  # type: ignore
 
 from java.lang import Boolean, Byte, Character, Double, Float, Integer, Long, Short, System, Void, Object  # type: ignore
@@ -119,7 +119,7 @@ def collect_peers():
 def _plugins_dir():
     if not _plugins_dirs:
         try:
-            from com.exteragram.messenger.plugins import PluginsController  # type: ignore
+            from com.timegram.messenger.plugins import PluginsController  # type: ignore
             path = PluginsController.getInstance().getPluginsDir().getAbsolutePath()
             _plugins_dirs.append(os.path.realpath(str(path)))
         except Exception:

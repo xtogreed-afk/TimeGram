@@ -23,7 +23,7 @@ import threading
 from typing import Dict, Any, Optional, Callable
 import traceback
 
-from com.exteragram.messenger.plugins import PluginsController
+from com.timegram.messenger.plugins import PluginsController
 from org.telegram.messenger import FileLoader, Utilities
 
 from android_utils import run_on_ui_thread, log

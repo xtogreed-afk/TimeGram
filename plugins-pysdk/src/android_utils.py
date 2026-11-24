@@ -17,8 +17,8 @@ from typing import Any
 from android.view import View
 from com.android.dx import TypeId
 from com.chaquo.python import PyObject
-from com.exteragram.messenger.plugins.utils import ClassProxy as CP
-from com.exteragram.messenger.utils import AppUtils
+from com.timegram.messenger.plugins.utils import ClassProxy as CP
+from com.timegram.messenger.utils import AppUtils
 from java import dynamic_proxy, jarray
 from extera_utils.classes import Base, java_subclass, jclassbuilder, jfield, jsetmethod
 from java.lang import Runnable, Object

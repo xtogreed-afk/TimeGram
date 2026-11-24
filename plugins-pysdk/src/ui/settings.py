@@ -18,8 +18,8 @@ from typing import List, Callable, Any, Optional
 
 from android.view import View
 from org.telegram.ui.Components import UItem
-from com.exteragram.messenger.plugins import PluginsConstants
-from com.exteragram.messenger.plugins.models import CustomSetting
+from com.timegram.messenger.plugins import PluginsConstants
+from com.timegram.messenger.plugins.models import CustomSetting
 
 from extera_utils.classes import Base, java_subclass, joverride, jfield, jgetmethod, jclassbuilder, PyObj, jsetmethod
 from com.android.dx import TypeId, Label, Comparison
@@ -27,7 +27,7 @@ from java import jarray
 from java.lang.reflect import Modifier
 from java.lang import Object
 from com.chaquo.python import PyObject
-from com.exteragram.messenger.plugins.utils import ClassProxy as CP
+from com.timegram.messenger.plugins.utils import ClassProxy as CP
 
 
 @dataclass

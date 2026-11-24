@@ -79,7 +79,7 @@ _handler_state = threading.local()
 
 def _read_dev_mode() -> bool:
     try:
-        from com.exteragram.messenger import ExteraConfig
+        from com.timegram.messenger import ExteraConfig
         return bool(ExteraConfig.pluginsDevMode)
     except Exception:
         return False

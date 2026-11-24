@@ -13,7 +13,7 @@ from __future__ import annotations
 import traceback
 
 from android_utils import log, run_on_ui_thread
-from com.exteragram.messenger.plugins import PluginsController
+from com.timegram.messenger.plugins import PluginsController
 
 from elyxcore._dev_server import ElyxDevServer
 from elyxcore._importer import setup as setup_importer, stop as stop_importer

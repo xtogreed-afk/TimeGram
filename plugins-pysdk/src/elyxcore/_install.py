@@ -17,8 +17,8 @@ from contextlib import suppress
 from typing import Dict
 from zipfile import ZipFile
 
-from com.exteragram.messenger.plugins import PluginsController
-from com.exteragram.messenger.plugins.ui.components import InstallPluginBottomSheet, RequiredPluginInfo
+from com.timegram.messenger.plugins import PluginsController
+from com.timegram.messenger.plugins.ui.components import InstallPluginBottomSheet, RequiredPluginInfo
 
 from elyxcore.utils import gen, gen2, resize_image
 from android.content import DialogInterface

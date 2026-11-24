@@ -957,7 +957,7 @@ class IntentsManager:
             return
 
         from de.robv.android.xposed import XposedBridge
-        from com.exteragram.messenger.utils import IntentsController
+        from com.timegram.messenger.utils import IntentsController
 
         hook = cls.__ghc()
         cls.__hooks.append(

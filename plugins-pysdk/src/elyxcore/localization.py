@@ -15,13 +15,13 @@ from typing import Any, Dict, List, Optional, overload
 
 from androidx.core.content import ContextCompat
 from com.chaquo.python import PyException
-from com.exteragram.messenger.plugins import Plugin, PluginsController
-from com.exteragram.messenger.plugins.hooks import PluginsHooks
-from com.exteragram.messenger.plugins.models import CustomSetting, DividerSetting, EditTextSetting, HeaderSetting, \
+from com.timegram.messenger.plugins import Plugin, PluginsController
+from com.timegram.messenger.plugins.hooks import PluginsHooks
+from com.timegram.messenger.plugins.models import CustomSetting, DividerSetting, EditTextSetting, HeaderSetting, \
     InputSetting, SelectorSetting, SwitchSetting, TextSetting
-from com.exteragram.messenger.plugins.pip import PipController
-from com.exteragram.messenger.plugins.ui import PluginSettingsActivity, PluginsActivity
-from com.exteragram.messenger.plugins.ui.components import InstallPluginBottomSheet, PluginCellDelegate, \
+from com.timegram.messenger.plugins.pip import PipController
+from com.timegram.messenger.plugins.ui import PluginSettingsActivity, PluginsActivity
+from com.timegram.messenger.plugins.ui.components import InstallPluginBottomSheet, PluginCellDelegate, \
     PluginRequirementsView
 from de.robv.android.xposed import XposedBridge
 from org.mvel2 import MVEL

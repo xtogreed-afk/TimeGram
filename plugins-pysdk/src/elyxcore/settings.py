@@ -11,7 +11,7 @@
 ############### Settings PART ################
 
 import plugin_settings
-from com.exteragram.messenger.plugins import PluginsController  # noqa
+from com.timegram.messenger.plugins import PluginsController  # noqa
 
 
 class SettingsController:

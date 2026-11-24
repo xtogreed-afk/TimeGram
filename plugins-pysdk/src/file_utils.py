@@ -32,7 +32,7 @@ import os
 import traceback
 from typing import List, Optional, Callable
 from org.telegram.messenger import FileLoader, MessageObject, AndroidUtilities
-from com.exteragram.messenger.plugins import PluginsController
+from com.timegram.messenger.plugins import PluginsController
 from android_utils import log
 from android.app import Activity
 from org.telegram.ui.ActionBar import Theme, BaseFragment
