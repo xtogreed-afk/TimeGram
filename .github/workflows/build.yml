@@ -1,4 +1,4 @@
-name: Build exteraGram APK
+name: Build TimeGram APK
 
 on:
   workflow_dispatch:
@@ -23,8 +23,7 @@ jobs:
         env:
           KEYSTORE_BASE64: ${{ secrets.KEYSTORE_BASE64 }}
         run: |
-          echo "$KEYSTORE_BASE64" | tr -d '\n\r ' | base64 -d > release.jks
-          ls -lh release.jks
+          echo "$KEYSTORE_BASE64" | tr -d '\n\r ' | base64 -d > TMessagesProj/config/exteraGram.jks
 
       - name: Configure API keys and signing
         env:
@@ -34,28 +33,26 @@ jobs:
           KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
           KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
         run: |
-          # Пример проброса свойств в gradle.properties (при необходимости адаптируй под нужные ключи/файлы проекта)
-          cat <<EOF >> gradle.properties
-          APP_ID=${APP_ID}
-          APP_HASH=${APP_HASH}
-          RELEASE_STORE_FILE=release.jks
-          RELEASE_STORE_PASSWORD=${KEYSTORE_PASSWORD}
-          RELEASE_KEY_ALIAS=${KEY_ALIAS}
-          RELEASE_KEY_PASSWORD=${KEY_PASSWORD}
+          cat > API_KEYS <<EOF
+          APP_ID = ${APP_ID}
+          APP_HASH = "${APP_HASH}"
+          MAPS_V2_API = dummy
+          SIGNING_KEY_STORE_PASSWORD = ${KEYSTORE_PASSWORD}
+          SIGNING_KEY_ALIAS = ${KEY_ALIAS}
+          SIGNING_KEY_PASSWORD = ${KEY_PASSWORD}
           EOF
 
       - name: Grant execute permission for gradlew
         run: chmod +x ./gradlew
 
       - name: Build APK
-        run: ./gradlew assembleRelease --stacktrace
+        run: ./gradlew :TMessagesProj:assembleFullArm64Release --stacktrace
 
       - name: Upload APK artifact
         uses: actions/upload-artifact@v4
         with:
-          name: exteraGram-release-apk
+          name: TimeGram-release-apk
           path: |
             **/*.apk
             !**/build/intermediates/**
           if-no-files-found: warn
-          
