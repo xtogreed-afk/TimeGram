@@ -11,6 +11,7 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 90
     steps:
       - uses: actions/checkout@v4
         with:
@@ -37,11 +38,36 @@ jobs:
           sed -i "s/APP_ID = 4;/APP_ID = $APP_ID;/" $F
           sed -i "s/APP_HASH = \"[0-9a-f]*\"/APP_HASH = \"$APP_HASH\"/" $F
           sed -i 's/abiFilters "armeabi-v7a", "arm64-v8a", "x86", "x86_64"/abiFilters "arm64-v8a"/' TMessagesProj_App/build.gradle
+          printf 'org.gradle.parallel=true\norg.gradle.caching=true\norg.gradle.jvmargs=-Xmx5g -XX:+UseParallelGC\n' >> gradle.properties
+      - name: Install ccache
+        run: sudo apt-get install -y ccache
+      - name: Restore ccache
+        uses: actions/cache/restore@v4
+        with:
+          path: ~/.ccache
+          key: ccache-${{ runner.os }}-${{ github.run_id }}
+          restore-keys: ccache-${{ runner.os }}-
       - name: Build
+        env:
+          CMAKE_C_COMPILER_LAUNCHER: ccache
+          CMAKE_CXX_COMPILER_LAUNCHER: ccache
+          CCACHE_DIR: /home/runner/.ccache
+          CCACHE_MAXSIZE: 2G
+          CCACHE_BASEDIR: ${{ github.workspace }}
+          CCACHE_COMPILERCHECK: content
+          CCACHE_SLOPPINESS: time_macros,include_file_mtime,include_file_ctime
         run: |
-          printf 'org.gradle.parallel=true\norg.gradle.caching=true\n' >> gradle.properties
           chmod +x gradlew
-          ./gradlew :TMessagesProj_App:assembleAfatDebug --stacktrace
+          ./gradlew :TMessagesProj_App:assembleAfatDebug -Pandroid.injected.build.abi=arm64-v8a --build-cache --stacktrace
+      - name: ccache stats
+        if: always()
+        run: ccache -s || true
+      - name: Save ccache
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: ~/.ccache
+          key: ccache-${{ runner.os }}-${{ github.run_id }}
       - uses: actions/upload-artifact@v4
         with:
           name: TimeGram-apk
