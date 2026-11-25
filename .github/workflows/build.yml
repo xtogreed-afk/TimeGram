@@ -73,7 +73,12 @@ jobs:
         with:
           path: ~/.ccache
           key: ccache-${{ runner.os }}-${{ github.run_id }}
+      - name: Where is the APK
+        if: always()
+        run: find . -path ./.git -prune -o \( -name '*.apk' -o -name '*.aab' \) -print
       - uses: actions/upload-artifact@v4
         with:
           name: TimeGram-apk
-          path: TMessagesProj_App/build/outputs/apk/**/*.apk
+          path: |
+            **/build/outputs/**/*.apk
+            **/build/outputs/**/*.aab
