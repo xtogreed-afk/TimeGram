@@ -39,6 +39,11 @@ jobs:
           sed -i "s/APP_HASH = \"[0-9a-f]*\"/APP_HASH = \"$APP_HASH\"/" $F
           sed -i 's/abiFilters "armeabi-v7a", "arm64-v8a", "x86", "x86_64"/abiFilters "arm64-v8a"/' TMessagesProj_App/build.gradle
           printf 'org.gradle.parallel=true\norg.gradle.caching=true\norg.gradle.jvmargs=-Xmx5g -XX:+UseParallelGC\n' >> gradle.properties
+      - name: Own google-services.json
+        env:
+          GS_B64: ${{ secrets.GOOGLE_SERVICES_B64 }}
+        run: |
+          if [ -n "$GS_B64" ]; then echo "$GS_B64" | base64 -d > TMessagesProj_App/google-services.json; fi
       - name: Install ccache
         run: sudo apt-get install -y ccache
       - name: Restore ccache
