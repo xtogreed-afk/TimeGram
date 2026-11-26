@@ -78,8 +78,10 @@ jobs:
         run: find . -path ./.git -prune -o \( -name '*.apk' -o -name '*.aab' \) -print
       - name: Inspect APK
         if: always()
+        continue-on-error: true
         run: |
-          APK=TMessagesProj_App/build/intermediates/apk/afat/debug/app.apk
+          APK=$(find TMessagesProj_App/build -name app.apk | head -1)
+          echo "APK=$APK"
           BT=$(ls -d $ANDROID_HOME/build-tools/* | sort -V | tail -1)
           echo "== build-tools: $BT"; ls -l $APK
           echo "== apksigner verify"; $BT/apksigner verify --verbose --print-certs $APK 2>&1 | head -20 || true
