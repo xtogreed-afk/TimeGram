@@ -80,5 +80,7 @@ jobs:
         with:
           name: TimeGram-apk
           path: |
+            TMessagesProj_App/build/intermediates/apk/**/*.apk
             **/build/outputs/**/*.apk
             **/build/outputs/**/*.aab
+          if-no-files-found: error
