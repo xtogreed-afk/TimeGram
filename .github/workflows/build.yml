@@ -25,7 +25,7 @@ jobs:
           cache-read-only: false
       - name: Accept licenses
         run: yes | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --licenses > /dev/null || true
-      - name: Own API keys and arm64 only
+      - name: Own API keys and arm ABIs only
         env:
           APP_ID: ${{ secrets.APP_ID }}
           APP_HASH: ${{ secrets.APP_HASH }}
@@ -37,7 +37,7 @@ jobs:
           F=TMessagesProj/src/main/java/org/telegram/messenger/BuildVars.java
           sed -i "s/APP_ID = 4;/APP_ID = $APP_ID;/" $F
           sed -i "s/APP_HASH = \"[0-9a-f]*\"/APP_HASH = \"$APP_HASH\"/" $F
-          sed -i 's/abiFilters "armeabi-v7a", "arm64-v8a", "x86", "x86_64"/abiFilters "arm64-v8a"/' TMessagesProj_App/build.gradle
+          sed -i 's/abiFilters "armeabi-v7a", "arm64-v8a", "x86", "x86_64"/abiFilters "armeabi-v7a", "arm64-v8a"/' TMessagesProj_App/build.gradle
           printf 'org.gradle.parallel=true\norg.gradle.caching=true\norg.gradle.jvmargs=-Xmx5g -XX:+UseParallelGC\n' >> gradle.properties
       - name: Own google-services.json
         env:
@@ -63,7 +63,7 @@ jobs:
           CCACHE_SLOPPINESS: time_macros,include_file_mtime,include_file_ctime
         run: |
           chmod +x gradlew
-          ./gradlew :TMessagesProj_App:assembleAfatDebug -Pandroid.injected.build.abi=arm64-v8a --build-cache --stacktrace
+          ./gradlew :TMessagesProj_App:assembleAfatDebug --build-cache --stacktrace
       - name: ccache stats
         if: always()
         run: ccache -s || true
