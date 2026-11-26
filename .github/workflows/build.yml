@@ -76,6 +76,16 @@ jobs:
       - name: Where is the APK
         if: always()
         run: find . -path ./.git -prune -o \( -name '*.apk' -o -name '*.aab' \) -print
+      - name: Inspect APK
+        if: always()
+        run: |
+          APK=TMessagesProj_App/build/intermediates/apk/afat/debug/app.apk
+          BT=$(ls -d $ANDROID_HOME/build-tools/* | sort -V | tail -1)
+          echo "== build-tools: $BT"; ls -l $APK
+          echo "== apksigner verify"; $BT/apksigner verify --verbose --print-certs $APK 2>&1 | head -20 || true
+          echo "== zipalign check"; $BT/zipalign -c -P 16 -v 4 $APK 2>&1 | tail -5 || true
+          echo "== badging"; $BT/aapt2 dump badging $APK 2>&1 | head -40 || true
+          echo "== arsc/dex entries"; unzip -v $APK | grep -E "resources.arsc|classes|AndroidManifest|lib/" | head -20
       - uses: actions/upload-artifact@v4
         with:
           name: TimeGram-apk
