@@ -198,6 +198,7 @@ import org.telegram.ui.Components.SizeNotifierFrameLayout;
 import org.telegram.ui.Components.SlideView;
 import org.telegram.ui.Components.TextStyleSpan;
 import org.telegram.ui.Components.TextViewSwitcher;
+import org.telegram.ui.Components.TimeGramClockView;
 import org.telegram.ui.Components.TransformableLoginButtonView;
 import org.telegram.ui.Components.URLSpanNoUnderline;
 import org.telegram.ui.Components.VerticalPositionAutoAnimator;
@@ -2053,6 +2054,10 @@ public class LoginActivity extends BaseFragment implements NotificationCenter.No
 
             setOrientation(VERTICAL);
             setGravity(Gravity.CENTER);
+
+            if (activityMode != MODE_CHANGE_PHONE_NUMBER && !AndroidUtilities.isSmallScreen()) {
+                addView(new TimeGramClockView(context), LayoutHelper.createLinear(112, 112, Gravity.CENTER_HORIZONTAL, 0, 0, 0, 12));
+            }
 
             titleView = new TextView(context);
             titleView.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 18);
