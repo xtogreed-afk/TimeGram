@@ -32,6 +32,13 @@ public class TimeGramClockView extends View {
     private float intro = 0f; // 0..1
     private boolean running;
 
+    // busy spin (while a request is in flight) and per-digit pulse
+    private ValueAnimator busyAnimator;
+    private float busyAngle; // degrees, applied to all hands (multiples of 360 return to rest)
+    private ValueAnimator pulseAnimator;
+    private float pulse = 1f; // 0..1, 1 = idle
+    private float kick;       // second-hand kick in degrees
+
     private final OvershootInterpolator overshoot = new OvershootInterpolator(1.1f);
 
     public TimeGramClockView(Context context) {
@@ -64,6 +71,15 @@ public class TimeGramClockView extends View {
             introAnimator = null;
         }
         removeCallbacks(tick);
+        if (busyAnimator != null) {
+            busyAnimator.cancel();
+            busyAnimator = null;
+            busyAngle = 0f;
+        }
+        if (pulseAnimator != null) {
+            pulseAnimator.cancel();
+            pulseAnimator = null;
+        }
     }
 
     public void playIntro() {
@@ -90,6 +106,67 @@ public class TimeGramClockView extends View {
             }
         });
         introAnimator.start();
+    }
+
+
+    /** Short ripple + second-hand kick. Call on every typed digit. */
+    public void pulse() {
+        if (pulseAnimator != null) {
+            pulseAnimator.cancel();
+        }
+        pulseAnimator = ValueAnimator.ofFloat(0f, 1f);
+        pulseAnimator.setDuration(450);
+        pulseAnimator.addUpdateListener(a -> {
+            pulse = (float) a.getAnimatedValue();
+            kick = 14f * (1f - pulse);
+            invalidate();
+        });
+        pulseAnimator.start();
+    }
+
+    /** Hands spin continuously while busy, then settle back on the real time. */
+    public void setBusy(boolean busy) {
+        if (busy) {
+            if (busyAnimator != null && busyAnimator.isRunning() && busyAnimator.getRepeatCount() == ValueAnimator.INFINITE) {
+                return;
+            }
+            if (busyAnimator != null) {
+                busyAnimator.cancel();
+            }
+            busyAnimator = ValueAnimator.ofFloat(0f, 360f);
+            busyAnimator.setDuration(900);
+            busyAnimator.setInterpolator(new android.view.animation.LinearInterpolator());
+            busyAnimator.setRepeatCount(ValueAnimator.INFINITE);
+            busyAnimator.addUpdateListener(a -> {
+                busyAngle = (float) a.getAnimatedValue();
+                invalidate();
+            });
+            busyAnimator.start();
+        } else {
+            if (busyAnimator == null) {
+                return;
+            }
+            float from = busyAngle;
+            busyAnimator.cancel();
+            busyAnimator = ValueAnimator.ofFloat(from, 360f);
+            busyAnimator.setDuration(500);
+            busyAnimator.setInterpolator(new android.view.animation.DecelerateInterpolator());
+            busyAnimator.addUpdateListener(a -> {
+                busyAngle = (float) a.getAnimatedValue();
+                invalidate();
+            });
+            busyAnimator.addListener(new android.animation.AnimatorListenerAdapter() {
+                @Override
+                public void onAnimationEnd(android.animation.Animator animation) {
+                    if (busyAnimator == animation) {
+                        busyAngle = 0f;
+                        busyAnimator = null;
+                        invalidate();
+                    }
+                }
+            });
+            busyAnimator.start();
+        }
     }
 
     private final Runnable tick = new Runnable() {
@@ -140,6 +217,14 @@ public class TimeGramClockView extends View {
         ringPaint.setStrokeWidth(AndroidUtilities.dp(3.5f));
         canvas.drawCircle(cx, cy, radius * easeOut(ringT), ringPaint);
 
+        if (pulse < 1f) {
+            ringPaint.setAlpha((int) (140 * (1f - pulse)));
+            ringPaint.setStrokeWidth(AndroidUtilities.dp(2f));
+            canvas.drawCircle(cx, cy, radius * (0.95f + 0.3f * easeOut(pulse)), ringPaint);
+            ringPaint.setAlpha(255);
+            ringPaint.setStrokeWidth(AndroidUtilities.dp(3.5f));
+        }
+
         // 12 ticks pop in one after another between 10% and 70%
         tickPaint.setColor(textColor);
         for (int i = 0; i < 12; i++) {
@@ -168,9 +253,9 @@ public class TimeGramClockView extends View {
         float k = overshoot.getInterpolation(handsT);
         float spinsLeft = 1f - k; // extra full turns that unwind to 0
 
-        float hourAngle = hour * 30f - 360f * 1f * spinsLeft;
-        float minAngle = min * 6f - 360f * 3f * spinsLeft;
-        float secAngle = sec * 6f - 360f * 5f * spinsLeft;
+        float hourAngle = hour * 30f - 360f * 1f * spinsLeft + busyAngle;
+        float minAngle = min * 6f - 360f * 3f * spinsLeft + busyAngle * 3f;
+        float secAngle = sec * 6f - 360f * 5f * spinsLeft + busyAngle * 6f + kick;
 
         float handsAlpha = clamp01((intro - 0.25f) / 0.15f);
 

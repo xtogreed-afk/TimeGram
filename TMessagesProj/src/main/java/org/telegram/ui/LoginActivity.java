@@ -1398,6 +1398,9 @@ public class LoginActivity extends BaseFragment implements NotificationCenter.No
     }
 
     private void showEditDoneProgress(boolean show, boolean animated, boolean fromCallback) {
+        if (phoneClock != null) {
+            phoneClock.setBusy(show);
+        }
         if (animated && doneProgressVisible[currentDoneType] == show && !fromCallback) {
             return;
         }
@@ -1487,6 +1490,8 @@ public class LoginActivity extends BaseFragment implements NotificationCenter.No
             }
         }
     }
+
+    private TimeGramClockView phoneClock;
 
     private void needShowProgress(int requestId) {
         needShowProgress(requestId, true);
@@ -2056,7 +2061,8 @@ public class LoginActivity extends BaseFragment implements NotificationCenter.No
             setGravity(Gravity.CENTER);
 
             if (activityMode != MODE_CHANGE_PHONE_NUMBER && !AndroidUtilities.isSmallScreen()) {
-                addView(new TimeGramClockView(context), LayoutHelper.createLinear(112, 112, Gravity.CENTER_HORIZONTAL, 0, 0, 0, 12));
+                phoneClock = new TimeGramClockView(context);
+                addView(phoneClock, LayoutHelper.createLinear(112, 112, Gravity.CENTER_HORIZONTAL, 0, 0, 0, 12));
             }
 
             titleView = new TextView(context);
@@ -2372,6 +2378,20 @@ public class LoginActivity extends BaseFragment implements NotificationCenter.No
             phoneField.setShowSoftInputOnFocus(!(hasCustomKeyboard() && !isCustomKeyboardForceDisabled()));
             phoneField.setContentDescription(getString(R.string.PhoneNumber));
             linearLayout.addView(phoneField, LayoutHelper.createFrame(LayoutHelper.MATCH_PARENT, 36));
+            phoneField.addTextChangedListener(new TextWatcher() {
+                @Override
+                public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+
+                @Override
+                public void onTextChanged(CharSequence s, int start, int before, int count) {
+                    if (phoneClock != null && count > before) {
+                        phoneClock.pulse();
+                    }
+                }
+
+                @Override
+                public void afterTextChanged(Editable s) {}
+            });
             phoneField.addTextChangedListener(new TextWatcher() {
 
                 private int characterAction = -1;
