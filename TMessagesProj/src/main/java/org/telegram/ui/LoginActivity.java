@@ -199,6 +199,7 @@ import org.telegram.ui.Components.SlideView;
 import org.telegram.ui.Components.TextStyleSpan;
 import org.telegram.ui.Components.TextViewSwitcher;
 import org.telegram.ui.Components.TimeGramClockView;
+import org.telegram.ui.Components.TimeGramSkyView;
 import org.telegram.ui.Components.TransformableLoginButtonView;
 import org.telegram.ui.Components.URLSpanNoUnderline;
 import org.telegram.ui.Components.VerticalPositionAutoAnimator;
@@ -365,6 +366,7 @@ public class LoginActivity extends BaseFragment implements NotificationCenter.No
     private AlertDialog cancelDeleteProgressDialog;
 
     private SizeNotifierFrameLayout sizeNotifierFrameLayout;
+    private TimeGramSkyView skyView;
     private Runnable keyboardHideCallback;
 
     private ImageView backButtonView;
@@ -636,6 +638,11 @@ public class LoginActivity extends BaseFragment implements NotificationCenter.No
             }
         });
         fragmentView = sizeNotifierFrameLayout;
+
+        if (activityMode == MODE_LOGIN) {
+            skyView = new TimeGramSkyView(context);
+            sizeNotifierFrameLayout.addView(skyView, LayoutHelper.createFrame(LayoutHelper.MATCH_PARENT, LayoutHelper.MATCH_PARENT));
+        }
 
         ScrollView scrollView = new ScrollView(context) {
             @Override
@@ -8725,6 +8732,9 @@ public class LoginActivity extends BaseFragment implements NotificationCenter.No
                     floatingButton.setButtonVisible(false, false);
                     keyboardLinearLayout.setAlpha(0);
                     fragmentView.setBackgroundColor(Color.TRANSPARENT);
+                    if (skyView != null) {
+                        skyView.setAlpha(0f);
+                    }
                     startMessagingButton.setVisibility(View.INVISIBLE);
 
                     FrameLayout frameLayout = (FrameLayout) fragmentView;
@@ -8734,6 +8744,9 @@ public class LoginActivity extends BaseFragment implements NotificationCenter.No
                 @Override
                 public void onAnimationEnd(Animator animation) {
                     keyboardLinearLayout.setAlpha(1);
+                    if (skyView != null) {
+                        skyView.setAlpha(1f);
+                    }
                     startMessagingButton.setVisibility(View.VISIBLE);
                     ThemeBind.backgroundColor(fragmentView, Theme.key_windowBackgroundWhite);
                     floatingButton.setButtonVisible(true, false);
@@ -8755,6 +8768,9 @@ public class LoginActivity extends BaseFragment implements NotificationCenter.No
             animator.addUpdateListener(animation -> {
                 float val = (float) animation.getAnimatedValue();
                 keyboardLinearLayout.setAlpha(val);
+                if (skyView != null) {
+                    skyView.setAlpha(val);
+                }
                 fragmentView.setBackgroundColor(ColorUtils.setAlphaComponent(bgColor, (int) (initialAlpha * val)));
 
                 float inverted = 1f - val;
@@ -8790,6 +8806,12 @@ public class LoginActivity extends BaseFragment implements NotificationCenter.No
 
     private void updateColors() {
         fragmentView.setBackgroundColor(Theme.getColor(Theme.key_windowBackgroundWhite));
+        if (skyView != null) {
+            skyView.invalidate();
+        }
+        if (phoneClock != null) {
+            phoneClock.invalidate();
+        }
 
         backButtonFilterColor = applyColorFilter(backButtonView, Theme.getColor(Theme.key_windowBackgroundWhiteBlackText), backButtonFilterColor, PorterDuff.Mode.SRC_ATOP);
         backButtonSelectorColor = applySelectorBackground(backButtonView, Theme.getColor(Theme.key_listSelector), backButtonSelectorColor, Theme.RIPPLE_MASK_CIRCLE_20DP);

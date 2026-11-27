@@ -248,7 +248,13 @@ public class TimeGramClockView extends View {
         final float radius = Math.min(w, h) / 2f - AndroidUtilities.dp(4);
 
         final int textColor = Theme.getColor(Theme.key_windowBackgroundWhiteBlackText);
-        final int accent = Theme.getColor(Theme.key_featuredStickers_addButton);
+        final int accent = TimeGramSkyView.currentColors().accent;
+
+        // soft dial so the hands stay readable on any sky
+        float faceT = clamp01(intro / 0.3f);
+        centerPaint.setColor(Theme.getColor(Theme.key_windowBackgroundWhite));
+        centerPaint.setAlpha((int) (150 * faceT));
+        canvas.drawCircle(cx, cy, radius * easeOut(faceT), centerPaint);
 
         // ring grows in during the first 30% of the animation
         float ringT = clamp01(intro / 0.3f);
