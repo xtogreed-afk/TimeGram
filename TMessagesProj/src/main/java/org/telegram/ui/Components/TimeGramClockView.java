@@ -4,11 +4,18 @@ import android.animation.ValueAnimator;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Paint;
+import android.view.HapticFeedbackConstants;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.OvershootInterpolator;
 
+import android.view.ViewConfiguration;
+import android.widget.Toast;
+
 import org.telegram.messenger.AndroidUtilities;
+import org.telegram.messenger.LocaleController;
+import org.telegram.messenger.MessagesController;
+import org.telegram.messenger.R;
 import org.telegram.ui.ActionBar.Theme;
 
 import java.util.Calendar;
@@ -71,6 +78,7 @@ public class TimeGramClockView extends View {
             introAnimator = null;
         }
         removeCallbacks(tick);
+        removeCallbacks(longPress);
         if (busyAnimator != null) {
             busyAnimator.cancel();
             busyAnimator = null;
@@ -111,6 +119,9 @@ public class TimeGramClockView extends View {
 
     /** Short ripple + second-hand kick. Call on every typed digit. */
     public void pulse() {
+        if (isHapticEnabled()) {
+            performHapticFeedback(HapticFeedbackConstants.CLOCK_TICK);
+        }
         if (pulseAnimator != null) {
             pulseAnimator.cancel();
         }
@@ -169,6 +180,23 @@ public class TimeGramClockView extends View {
         }
     }
 
+
+    private static final String PREF_HAPTIC = "timegram_login_haptic";
+
+    /** Haptic tick on typed digits. Also respects the system "touch feedback" setting. */
+    public static boolean isHapticEnabled() {
+        return MessagesController.getGlobalMainSettings().getBoolean(PREF_HAPTIC, true);
+    }
+
+    private boolean longPressed;
+    private final Runnable longPress = () -> {
+        longPressed = true;
+        boolean enabled = !isHapticEnabled();
+        MessagesController.getGlobalMainSettings().edit().putBoolean(PREF_HAPTIC, enabled).apply();
+        performHapticFeedback(HapticFeedbackConstants.LONG_PRESS);
+        Toast.makeText(getContext(), LocaleController.getString(enabled ? R.string.TimeGramHapticOn : R.string.TimeGramHapticOff), Toast.LENGTH_SHORT).show();
+    };
+
     private final Runnable tick = new Runnable() {
         @Override
         public void run() {
@@ -187,11 +215,22 @@ public class TimeGramClockView extends View {
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        if (event.getAction() == MotionEvent.ACTION_UP) {
-            playIntro();
-            return true;
+        switch (event.getAction()) {
+            case MotionEvent.ACTION_DOWN:
+                longPressed = false;
+                postDelayed(longPress, ViewConfiguration.getLongPressTimeout());
+                return true;
+            case MotionEvent.ACTION_UP:
+                removeCallbacks(longPress);
+                if (!longPressed) {
+                    playIntro();
+                }
+                return true;
+            case MotionEvent.ACTION_CANCEL:
+                removeCallbacks(longPress);
+                return true;
         }
-        return event.getAction() == MotionEvent.ACTION_DOWN;
+        return super.onTouchEvent(event);
     }
 
     @Override

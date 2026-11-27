@@ -267,4 +267,6 @@
     <string name="TimeGramGreetingDay">Добрый день</string>
     <string name="TimeGramGreetingEvening">Добрый вечер</string>
     <string name="TimeGramGreetingNight">Доброй ночи</string>
+    <string name="TimeGramHapticOn">Вибро-тик включён</string>
+    <string name="TimeGramHapticOff">Вибро-тик выключен</string>
 </resources>

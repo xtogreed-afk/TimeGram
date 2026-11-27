@@ -11683,4 +11683,6 @@
     <string name="TimeGramGreetingDay">Good afternoon</string>
     <string name="TimeGramGreetingEvening">Good evening</string>
     <string name="TimeGramGreetingNight">Good night</string>
+    <string name="TimeGramHapticOn">Haptic tick on</string>
+    <string name="TimeGramHapticOff">Haptic tick off</string>
 </resources>
