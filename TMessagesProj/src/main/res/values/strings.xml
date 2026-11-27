@@ -11679,4 +11679,8 @@
     <string name="FpnvConsentSimSlot">SIM Slot</string>
     <string name="FpnvConsentSimSlotValue">SIM %1$d</string>
     <string name="FpnvConsentPhoneNumber">Phone Number</string>
+    <string name="TimeGramGreetingMorning">Good morning</string>
+    <string name="TimeGramGreetingDay">Good afternoon</string>
+    <string name="TimeGramGreetingEvening">Good evening</string>
+    <string name="TimeGramGreetingNight">Good night</string>
 </resources>

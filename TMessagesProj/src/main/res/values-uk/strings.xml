@@ -276,4 +276,8 @@
     <string name="RemindTodayAt">\'Нагадати сьогодні,\' HH:mm</string>
     <string name="RemindDayAt">\'Нагадати\' d MMM\',\' HH:mm</string>
     <string name="RemindDayYearAt">\'Нагадати\' d MMM yyyy\',\' HH:mm</string>
+    <string name="TimeGramGreetingMorning">Доброго ранку</string>
+    <string name="TimeGramGreetingDay">Добрий день</string>
+    <string name="TimeGramGreetingEvening">Добрий вечір</string>
+    <string name="TimeGramGreetingNight">Доброї ночі</string>
 </resources>

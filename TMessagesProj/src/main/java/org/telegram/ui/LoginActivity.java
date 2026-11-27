@@ -1491,6 +1491,18 @@ public class LoginActivity extends BaseFragment implements NotificationCenter.No
         }
     }
 
+    private static String getTimeGramGreeting() {
+        int hour = java.util.Calendar.getInstance().get(java.util.Calendar.HOUR_OF_DAY);
+        if (hour >= 5 && hour < 11) {
+            return getString(R.string.TimeGramGreetingMorning);
+        } else if (hour >= 11 && hour < 17) {
+            return getString(R.string.TimeGramGreetingDay);
+        } else if (hour >= 17 && hour < 23) {
+            return getString(R.string.TimeGramGreetingEvening);
+        }
+        return getString(R.string.TimeGramGreetingNight);
+    }
+
     private TimeGramClockView phoneClock;
 
     private void needShowProgress(int requestId) {
@@ -2068,7 +2080,7 @@ public class LoginActivity extends BaseFragment implements NotificationCenter.No
             titleView = new TextView(context);
             titleView.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 18);
             titleView.setTypeface(AndroidUtilities.bold());
-            titleView.setText(getString(activityMode == MODE_CHANGE_PHONE_NUMBER ? R.string.ChangePhoneNewNumber : R.string.YourNumber));
+            titleView.setText(activityMode == MODE_CHANGE_PHONE_NUMBER ? getString(R.string.ChangePhoneNewNumber) : getTimeGramGreeting());
             titleView.setGravity(Gravity.CENTER);
             titleView.setLineSpacing(dp(2), 1.0f);
             addView(titleView, LayoutHelper.createFrame(LayoutHelper.MATCH_PARENT, LayoutHelper.WRAP_CONTENT, Gravity.CENTER_HORIZONTAL, 32, 0, 32, 0));

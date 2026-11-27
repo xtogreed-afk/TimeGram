@@ -263,4 +263,8 @@
     <string name="RemindTodayAt">\'Отправить сегодня в\' HH:mm</string>
     <string name="RemindDayAt">\'Отправить\' d MMM \'в\' HH:mm</string>
     <string name="RemindDayYearAt">\'Напомнить\' d MMM yyyy \'в\' HH:mm</string>
+    <string name="TimeGramGreetingMorning">Доброе утро</string>
+    <string name="TimeGramGreetingDay">Добрый день</string>
+    <string name="TimeGramGreetingEvening">Добрый вечер</string>
+    <string name="TimeGramGreetingNight">Доброй ночи</string>
 </resources>
