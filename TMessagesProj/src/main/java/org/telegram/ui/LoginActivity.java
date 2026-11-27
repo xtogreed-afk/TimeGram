@@ -200,6 +200,7 @@ import org.telegram.ui.Components.TextStyleSpan;
 import org.telegram.ui.Components.TextViewSwitcher;
 import org.telegram.ui.Components.TimeGramClockView;
 import org.telegram.ui.Components.TimeGramCodeClockView;
+import org.telegram.ui.Components.TimeGramEnterTransition;
 import org.telegram.ui.Components.TimeGramSkyView;
 import org.telegram.ui.Components.TransformableLoginButtonView;
 import org.telegram.ui.Components.URLSpanNoUnderline;
@@ -1656,6 +1657,10 @@ public class LoginActivity extends BaseFragment implements NotificationCenter.No
         }
         clearCurrentState();
         if (getParentActivity() instanceof LaunchActivity) {
+            // not before the two-step password offer: only on the way into the app
+            if (activityMode == MODE_LOGIN && (newAccount || !(afterSignup && showSetPasswordConfirm))) {
+                playTimeGramEnterTransition();
+            }
             if (newAccount) {
                 newAccount = false;
                 pendingSwitchingAccount = true;
@@ -1689,6 +1694,22 @@ public class LoginActivity extends BaseFragment implements NotificationCenter.No
         } else if (getParentActivity() instanceof ExternalActionActivity) {
             ((ExternalActionActivity) getParentActivity()).onFinishLogin();
         }
+    }
+
+    private void playTimeGramEnterTransition() {
+        // the clock of the code screen if it is visible, otherwise the one from the first screen
+        View clock = null;
+        boolean clockOnScreen = false;
+        final SlideView current = views[currentViewNum];
+        if (current instanceof LoginActivitySmsView) {
+            clock = ((LoginActivitySmsView) current).codeClock;
+            clockOnScreen = clock != null && clock.isShown();
+        }
+        if (!clockOnScreen) {
+            clock = phoneClock;
+            clockOnScreen = clock != null && clock.isShown();
+        }
+        TimeGramEnterTransition.play(getParentActivity(), fragmentView, clock, clockOnScreen);
     }
 
     private void fakeSuccess() {
