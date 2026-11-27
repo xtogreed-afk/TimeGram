@@ -51,7 +51,7 @@ public class TimeGramCodeClockView extends View {
 
     private float strike = -1f;  // 0..1 while striking
     private boolean struck;      // stays green after a correct code
-    private float error;         // 1..0 after a wrong code
+    private float errorTime = -1f; // 0..1 during the wrong code shake
     private float ready = -1f;   // 0..1 ripple when the countdown is over
     private ValueAnimator strikeAnimator, errorAnimator, readyAnimator;
 
@@ -80,7 +80,7 @@ public class TimeGramCodeClockView extends View {
         struck = false;
         strike = -1f;
         ready = -1f;
-        error = 0f;
+        errorTime = -1f;
         invalidate();
     }
 
@@ -117,18 +117,19 @@ public class TimeGramCodeClockView extends View {
         readyAnimator = startAnimator(700, value -> ready = value, () -> ready = -1f);
     }
 
+    /** Wrong code: the hands show up (even during a countdown), tremble and turn red. */
     public void showError() {
         if (errorAnimator != null) {
             errorAnimator.cancel();
         }
-        errorAnimator = startAnimator(900, value -> error = 1f - value, () -> error = 0f);
+        errorAnimator = startAnimator(TimeGramClockView.ERROR_DURATION, value -> errorTime = value, () -> errorTime = -1f);
     }
 
     /** Correct code. */
     public void strike() {
         cancelAnimators();
         counting = false;
-        error = 0f;
+        errorTime = -1f;
         ready = -1f;
         struck = true;
         haptic();
@@ -207,7 +208,9 @@ public class TimeGramCodeClockView extends View {
         final int textColor = Theme.getColor(Theme.key_windowBackgroundWhiteBlackText);
         final int green = Theme.getColor(Theme.key_checkbox);
         int accent = TimeGramSkyView.currentColors().accent;
-        accent = ColorUtils.blendARGB(accent, Theme.getColor(Theme.key_text_RedBold), error);
+        final float redness = TimeGramClockView.errorRedness(errorTime);
+        final int errorColor = Theme.getColor(Theme.key_text_RedBold);
+        accent = ColorUtils.blendARGB(accent, errorColor, redness);
         if (struck) {
             accent = green;
         }
@@ -259,7 +262,7 @@ public class TimeGramCodeClockView extends View {
             }
         }
 
-        if (counting) {
+        if (counting && errorTime < 0f) {
             final long seconds = left / 1000;
             textPaint.setColor(textColor);
             textPaint.setTextSize(AndroidUtilities.dp(24));
@@ -269,14 +272,14 @@ public class TimeGramCodeClockView extends View {
             final float second = c.get(Calendar.SECOND);
             final float minute = c.get(Calendar.MINUTE) + second / 60f;
             final float hour = (c.get(Calendar.HOUR) % 12) + minute / 60f;
-            handPaint.setColor(textColor);
+            handPaint.setColor(ColorUtils.blendARGB(textColor, errorColor, redness));
             handPaint.setStrokeWidth(AndroidUtilities.dp(4f));
-            drawHand(canvas, cx, cy, hour * 30f, radius * 0.40f);
+            drawHand(canvas, cx, cy, hour * 30f + TimeGramClockView.errorJitter(errorTime, 0), radius * 0.40f);
             handPaint.setStrokeWidth(AndroidUtilities.dp(3f));
-            drawHand(canvas, cx, cy, minute * 6f, radius * 0.60f);
+            drawHand(canvas, cx, cy, minute * 6f + TimeGramClockView.errorJitter(errorTime, 1), radius * 0.60f);
             handPaint.setColor(accent);
             handPaint.setStrokeWidth(AndroidUtilities.dp(2f));
-            drawHand(canvas, cx, cy, second * 6f, radius * 0.66f);
+            drawHand(canvas, cx, cy, second * 6f + TimeGramClockView.errorJitter(errorTime, 2), radius * 0.66f);
             facePaint.setColor(accent);
             canvas.drawCircle(cx, cy, AndroidUtilities.dp(4), facePaint);
         }

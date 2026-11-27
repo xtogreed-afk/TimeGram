@@ -12,6 +12,8 @@ import android.view.animation.OvershootInterpolator;
 import android.view.ViewConfiguration;
 import android.widget.Toast;
 
+import androidx.core.graphics.ColorUtils;
+
 import org.telegram.messenger.AndroidUtilities;
 import org.telegram.messenger.LocaleController;
 import org.telegram.messenger.MessagesController;
@@ -45,6 +47,28 @@ public class TimeGramClockView extends View {
     private ValueAnimator pulseAnimator;
     private float pulse = 1f; // 0..1, 1 = idle
     private float kick;       // second-hand kick in degrees
+
+    // "wrong number" shake: 0..1 while running, -1 when idle
+    public static final long ERROR_DURATION = 1000;
+    private ValueAnimator errorAnimator;
+    private float errorTime = -1f;
+
+    /** How red the hands are at moment t (0..1) of the error shake: quick in, hold, fade out. */
+    static float errorRedness(float t) {
+        if (t < 0f) {
+            return 0f;
+        }
+        return t < 0.1f ? t / 0.1f : t > 0.7f ? Math.max(0f, (1f - t) / 0.3f) : 1f;
+    }
+
+    /** Extra hand angle in degrees: a fast tremble that dies out, so the hand ends up where it was. */
+    static float errorJitter(float t, int hand) {
+        if (t < 0f) {
+            return 0f;
+        }
+        final float fade = 1f - t;
+        return 14f * fade * fade * (float) Math.sin(t * Math.PI * 2 * (9 + hand * 2));
+    }
 
     private final OvershootInterpolator overshoot = new OvershootInterpolator(1.1f);
 
@@ -88,6 +112,35 @@ public class TimeGramClockView extends View {
             pulseAnimator.cancel();
             pulseAnimator = null;
         }
+        if (errorAnimator != null) {
+            errorAnimator.cancel();
+            errorAnimator = null;
+        }
+        errorTime = -1f;
+    }
+
+    /** Wrong phone number: the hands tremble and turn red for a second. */
+    public void shakeError() {
+        if (errorAnimator != null) {
+            errorAnimator.cancel();
+        }
+        errorAnimator = ValueAnimator.ofFloat(0f, 1f);
+        errorAnimator.setDuration(ERROR_DURATION);
+        errorAnimator.setInterpolator(new android.view.animation.LinearInterpolator());
+        // if the hands are still spinning for the request, let them stop first
+        errorAnimator.setStartDelay(busyAnimator != null ? 500 : 0);
+        errorAnimator.addUpdateListener(a -> {
+            errorTime = (float) a.getAnimatedValue();
+            invalidate();
+        });
+        errorAnimator.addListener(new android.animation.AnimatorListenerAdapter() {
+            @Override
+            public void onAnimationEnd(android.animation.Animator animation) {
+                errorTime = -1f;
+                invalidate();
+            }
+        });
+        errorAnimator.start();
     }
 
     public void playIntro() {
@@ -304,7 +357,13 @@ public class TimeGramClockView extends View {
 
         float handsAlpha = clamp01((intro - 0.25f) / 0.15f);
 
-        handPaint.setColor(textColor);
+        final float redness = errorRedness(errorTime);
+        final int errorColor = Theme.getColor(Theme.key_text_RedBold);
+        hourAngle += errorJitter(errorTime, 0);
+        minAngle += errorJitter(errorTime, 1);
+        secAngle += errorJitter(errorTime, 2);
+
+        handPaint.setColor(ColorUtils.blendARGB(textColor, errorColor, redness));
         handPaint.setAlpha((int) (255 * handsAlpha));
         handPaint.setStrokeWidth(AndroidUtilities.dp(4.5f));
         drawHand(canvas, cx, cy, hourAngle, radius * 0.45f, handPaint);
@@ -312,12 +371,13 @@ public class TimeGramClockView extends View {
         handPaint.setStrokeWidth(AndroidUtilities.dp(3.5f));
         drawHand(canvas, cx, cy, minAngle, radius * 0.68f, handPaint);
 
-        secondPaint.setColor(accent);
+        final int pointerColor = ColorUtils.blendARGB(accent, errorColor, redness);
+        secondPaint.setColor(pointerColor);
         secondPaint.setAlpha((int) (255 * handsAlpha));
         secondPaint.setStrokeWidth(AndroidUtilities.dp(2f));
         drawHand(canvas, cx, cy, secAngle, radius * 0.76f, secondPaint);
 
-        centerPaint.setColor(accent);
+        centerPaint.setColor(pointerColor);
         centerPaint.setAlpha((int) (255 * handsAlpha));
         canvas.drawCircle(cx, cy, AndroidUtilities.dp(4.5f), centerPaint);
     }
