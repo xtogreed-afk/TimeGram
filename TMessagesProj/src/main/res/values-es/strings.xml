@@ -1316,4 +1316,10 @@
     <string name="RemindDayYearAt">\'Recordar el\' d \'de\' MMM \'de\' yyyy \'a las\' HH:mm</string>
     <string name="BotsMenuTitle">Menu</string>
     <string name="Understood">👍 Entendido</string>
+    <string name="TimeGramGreetingMorning">Buenos días</string>
+    <string name="TimeGramGreetingDay">Buenas tardes</string>
+    <string name="TimeGramGreetingEvening">Buenas tardes</string>
+    <string name="TimeGramGreetingNight">Buenas noches</string>
+    <string name="TimeGramHapticOn">Vibración al teclear activada</string>
+    <string name="TimeGramHapticOff">Vibración al teclear desactivada</string>
 </resources>

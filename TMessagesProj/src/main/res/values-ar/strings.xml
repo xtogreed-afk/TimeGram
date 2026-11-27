@@ -1243,4 +1243,10 @@
     <string name="RemindTodayAt">\'ذكّرني اليوم عند\' HH:mm</string>
     <string name="RemindDayAt">\'ذكّرني بتاريخ\' d MMM \'عند\' HH:mm</string>
     <string name="RemindDayYearAt">\'ذكّرني بتاريخ\' d MMM yyyy \'عند\' HH:mm</string>
+    <string name="TimeGramGreetingMorning">صباح الخير</string>
+    <string name="TimeGramGreetingDay">طاب يومك</string>
+    <string name="TimeGramGreetingEvening">مساء الخير</string>
+    <string name="TimeGramGreetingNight">طابت ليلتك</string>
+    <string name="TimeGramHapticOn">تم تشغيل الاهتزاز عند الكتابة</string>
+    <string name="TimeGramHapticOff">تم إيقاف الاهتزاز عند الكتابة</string>
 </resources>

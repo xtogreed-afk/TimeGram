@@ -1136,4 +1136,10 @@
     <string name="RemindDayAt">MMM d HH:mm\'에 알리기\'</string>
     <string name="RemindDayYearAt">yyyy\'년\' M\'월\' d\'일\' HH:mm\'에 알림\'</string>
     <string name="BotsMenuTitle">메뉴</string>
+    <string name="TimeGramGreetingMorning">좋은 아침이에요</string>
+    <string name="TimeGramGreetingDay">좋은 오후예요</string>
+    <string name="TimeGramGreetingEvening">좋은 저녁이에요</string>
+    <string name="TimeGramGreetingNight">좋은 밤이에요</string>
+    <string name="TimeGramHapticOn">햅틱 틱 켜짐</string>
+    <string name="TimeGramHapticOff">햅틱 틱 꺼짐</string>
 </resources>

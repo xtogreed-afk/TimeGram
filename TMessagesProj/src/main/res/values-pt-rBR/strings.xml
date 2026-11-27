@@ -1249,4 +1249,10 @@
     <string name="RemindDayAt">\'Lembrar em\' d \'de\' MMM \'às\' HH:mm</string>
     <string name="RemindDayYearAt">\'Lembrar em\' d \'de\' MMM \'de\' yyyy \'às\' HH:mm</string>
     <string name="BotsMenuTitle">Menu</string>
+    <string name="TimeGramGreetingMorning">Bom dia</string>
+    <string name="TimeGramGreetingDay">Boa tarde</string>
+    <string name="TimeGramGreetingEvening">Boa noite</string>
+    <string name="TimeGramGreetingNight">Boa noite</string>
+    <string name="TimeGramHapticOn">Vibração ao digitar ativada</string>
+    <string name="TimeGramHapticOff">Vibração ao digitar desativada</string>
 </resources>
