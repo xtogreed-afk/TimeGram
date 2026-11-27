@@ -199,6 +199,7 @@ import org.telegram.ui.Components.SlideView;
 import org.telegram.ui.Components.TextStyleSpan;
 import org.telegram.ui.Components.TextViewSwitcher;
 import org.telegram.ui.Components.TimeGramClockView;
+import org.telegram.ui.Components.TimeGramCodeClockView;
 import org.telegram.ui.Components.TimeGramSkyView;
 import org.telegram.ui.Components.TransformableLoginButtonView;
 import org.telegram.ui.Components.URLSpanNoUnderline;
@@ -3828,6 +3829,8 @@ public class LoginActivity extends BaseFragment implements NotificationCenter.No
         private ImageView blackImageView;
         private RLottieImageView blueImageView;
         private LoadingTextView timeText;
+        private TimeGramCodeClockView codeClock;
+        private int timeTotal;
 
         private FrameLayout bottomContainer;
         private ViewSwitcher errorViewSwitcher;
@@ -3853,6 +3856,7 @@ public class LoginActivity extends BaseFragment implements NotificationCenter.No
         private boolean isDotsAnimationVisible;
 
         private Timer timeTimer;
+        private TimerTask timeTask;
         private Timer codeTimer;
         private int openTime;
         private final Object timerSync = new Object();
@@ -4020,6 +4024,12 @@ public class LoginActivity extends BaseFragment implements NotificationCenter.No
                     blueImageView.setTranslationY(-AndroidUtilities.dp(24));
                 }
                 frameLayout.addView(blueImageView, LayoutHelper.createFrame(size, size, Gravity.LEFT | Gravity.TOP, 0, 0, 0, currentType == AUTH_TYPE_MESSAGE && !AndroidUtilities.isSmallScreen() ? -AndroidUtilities.dp(16) : 0));
+                if (activityMode == MODE_LOGIN && !AndroidUtilities.isSmallScreen()) {
+                    // TimeGram: a countdown clock instead of the animation
+                    blueImageView.setVisibility(GONE);
+                    codeClock = new TimeGramCodeClockView(context);
+                    frameLayout.addView(codeClock, LayoutHelper.createFrame(136, 136, Gravity.CENTER_HORIZONTAL | Gravity.TOP));
+                }
                 titleTextView.setText(overrideTitle != null ? overrideTitle : getString(currentType == AUTH_TYPE_MESSAGE ? R.string.SentAppCodeTitle : R.string.SentSmsCodeTitle));
                 addView(titleTextView, LayoutHelper.createLinear(LayoutHelper.WRAP_CONTENT, LayoutHelper.WRAP_CONTENT, Gravity.CENTER_HORIZONTAL | Gravity.TOP, 0, 18, 0, 0));
                 int sideMargin = currentType == AUTH_TYPE_FRAGMENT_SMS ? 16 : 0;
@@ -4614,6 +4624,9 @@ public class LoginActivity extends BaseFragment implements NotificationCenter.No
             requestPhone = params.getString("phoneFormated");
             phoneHash = params.getString("phoneHash");
             time = params.getInt("timeout");
+            // the full countdown is kept separately: "timeout" is overwritten with the rest of it in onHide()
+            timeTotal = Math.max(params.getInt("timegramTimeoutTotal"), time);
+            params.putInt("timegramTimeoutTotal", timeTotal);
             openTime = (int) (System.currentTimeMillis() / 1000);
             nextType = params.getInt("nextType");
             pattern = params.getString("pattern");
@@ -4629,6 +4642,9 @@ public class LoginActivity extends BaseFragment implements NotificationCenter.No
             nextCodeAuth = null;
 
             codeFieldContainer.setNumbersCount(length, currentType);
+            if (codeClock != null) {
+                codeClock.reset(length);
+            }
             for (CodeNumberField f : codeFieldContainer.codeField) {
                 f.setShowSoftInputOnFocusCompat(!(hasCustomKeyboard() && !isCustomKeyboardForceDisabled()));
                 f.addTextChangedListener(new TextWatcher() {
@@ -4644,7 +4660,9 @@ public class LoginActivity extends BaseFragment implements NotificationCenter.No
                     public void onTextChanged(CharSequence s, int start, int before, int count) {}
 
                     @Override
-                    public void afterTextChanged(Editable s) {}
+                    public void afterTextChanged(Editable s) {
+                        updateCodeClockDigits();
+                    }
                 });
 
                 f.setOnFocusChangeListener((v, hasFocus) -> {
@@ -4836,6 +4854,15 @@ public class LoginActivity extends BaseFragment implements NotificationCenter.No
             }
         }
 
+        private void updateCodeClockDigits() {
+            if (codeClock == null || codeFieldContainer.codeField == null) {
+                return;
+            }
+            for (int a = 0; a < codeFieldContainer.codeField.length; a++) {
+                codeClock.setDigit(a, codeFieldContainer.codeField[a].length() > 0);
+            }
+        }
+
         private void setProblemTextVisible(boolean visible) {
             if (problemText == null) {
                 return;
@@ -4901,17 +4928,26 @@ public class LoginActivity extends BaseFragment implements NotificationCenter.No
                 progressView.resetProgressAnimation();
             }
             timeTimer = new Timer();
-            timeTimer.schedule(new TimerTask() {
+            // counting down only when there is something to wait for
+            final boolean[] clockStarted = {false};
+            timeTimer.schedule(timeTask = new TimerTask() {
                 @Override
                 public void run() {
                     if (timeTimer == null) {
                         return;
                     }
+                    final TimerTask task = this;
                     AndroidUtilities.runOnUIThread(() -> {
+                        final boolean stale = task != timeTask;
                         double currentTime = System.currentTimeMillis();
                         double diff = currentTime - lastCurrentTime;
                         lastCurrentTime = currentTime;
                         time -= diff;
+                        if (codeClock != null && !stale && time >= 1000 && nextType != 0) {
+                            // "time" is the source of truth, same as the text below the code
+                            codeClock.setCountdown(time, timeTotal);
+                            clockStarted[0] = true;
+                        }
                         if (time >= 1000) {
                             int minutes = time / 1000 / 60;
                             int seconds = time / 1000 - minutes * 60;
@@ -4927,6 +4963,9 @@ public class LoginActivity extends BaseFragment implements NotificationCenter.No
                             }
                         } else {
                             destroyTimer();
+                            if (codeClock != null && !stale && clockStarted[0]) {
+                                codeClock.finishCountdown();
+                            }
                             if (nextType == AUTH_TYPE_FLASH_CALL || nextType == AUTH_TYPE_CALL || nextType == AUTH_TYPE_SMS || nextType == AUTH_TYPE_PHRASE || nextType == AUTH_TYPE_WORD || nextType == AUTH_TYPE_MISSED_CALL) {
                                 if (nextType == AUTH_TYPE_CALL) {
                                     timeText.setText(getString("RequestCallButton", R.string.RequestCallButton));
@@ -4947,6 +4986,10 @@ public class LoginActivity extends BaseFragment implements NotificationCenter.No
         private void destroyTimer() {
             ThemeBind.textColor(timeText, Theme.key_windowBackgroundWhiteGrayText6);
             timeText.setTag(R.id.color_key_tag, Theme.key_windowBackgroundWhiteGrayText6);
+            timeTask = null;
+            if (codeClock != null) {
+                codeClock.stopCountdown();
+            }
             try {
                 synchronized (timerSync) {
                     if (timeTimer != null) {
@@ -5281,16 +5324,24 @@ public class LoginActivity extends BaseFragment implements NotificationCenter.No
                 int finalI = i;
                 codeFieldContainer.postDelayed(()-> codeFieldContainer.codeField[finalI].animateSuccessProgress(1f), i * 75L);
             }
+            long delay = codeFieldContainer.codeField.length * 75L + 400L;
+            if (codeClock != null) {
+                codeClock.strike();
+                delay = Math.max(delay, TimeGramCodeClockView.STRIKE_DURATION);
+            }
             codeFieldContainer.postDelayed(()->{
                 for (int i = 0; i < codeFieldContainer.codeField.length; i++) {
                     codeFieldContainer.codeField[i].animateSuccessProgress(0f);
                 }
                 callback.run();
                 codeFieldContainer.isFocusSuppressed = false;
-            }, codeFieldContainer.codeField.length * 75L + 400L);
+            }, delay);
         }
 
         private void shakeWrongCode() {
+            if (codeClock != null) {
+                codeClock.showError();
+            }
             try {
                 codeFieldContainer.performHapticFeedback(HapticFeedbackConstants.KEYBOARD_TAP, HapticFeedbackConstants.FLAG_IGNORE_GLOBAL_SETTING);
             } catch (Exception ignore) {}
